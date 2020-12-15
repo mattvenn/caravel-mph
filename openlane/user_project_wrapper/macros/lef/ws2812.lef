@@ -1,0 +1,342 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO ws2812
+  CLASS BLOCK ;
+  FOREIGN ws2812 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 271.030 BY 281.750 ;
+  PIN clk
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 218.130 277.750 218.410 281.750 ;
+    END
+  END clk
+  PIN data
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met2 ;
+        RECT 152.810 0.000 153.090 4.000 ;
+    END
+  END data
+  PIN led_num[0]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 27.690 0.000 27.970 4.000 ;
+    END
+  END led_num[0]
+  PIN led_num[1]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 2.850 0.000 3.130 4.000 ;
+    END
+  END led_num[1]
+  PIN led_num[2]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 77.560 4.000 78.160 ;
+    END
+  END led_num[2]
+  PIN led_num[3]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 228.250 0.000 228.530 4.000 ;
+    END
+  END led_num[3]
+  PIN led_num[4]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 267.030 17.720 271.030 18.320 ;
+    END
+  END led_num[4]
+  PIN led_num[5]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 77.370 0.000 77.650 4.000 ;
+    END
+  END led_num[5]
+  PIN led_num[6]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 117.850 277.750 118.130 281.750 ;
+    END
+  END led_num[6]
+  PIN led_num[7]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 42.410 277.750 42.690 281.750 ;
+    END
+  END led_num[7]
+  PIN reset
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 168.450 277.750 168.730 281.750 ;
+    END
+  END reset
+  PIN rgb_data[0]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 151.000 4.000 151.600 ;
+    END
+  END rgb_data[0]
+  PIN rgb_data[10]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 267.030 54.440 271.030 55.040 ;
+    END
+  END rgb_data[10]
+  PIN rgb_data[11]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 253.090 0.000 253.370 4.000 ;
+    END
+  END rgb_data[11]
+  PIN rgb_data[12]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 114.280 4.000 114.880 ;
+    END
+  END rgb_data[12]
+  PIN rgb_data[13]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 52.530 0.000 52.810 4.000 ;
+    END
+  END rgb_data[13]
+  PIN rgb_data[14]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 267.030 239.400 271.030 240.000 ;
+    END
+  END rgb_data[14]
+  PIN rgb_data[15]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 189.080 4.000 189.680 ;
+    END
+  END rgb_data[15]
+  PIN rgb_data[16]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 242.970 277.750 243.250 281.750 ;
+    END
+  END rgb_data[16]
+  PIN rgb_data[17]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 93.010 277.750 93.290 281.750 ;
+    END
+  END rgb_data[17]
+  PIN rgb_data[18]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 267.030 202.680 271.030 203.280 ;
+    END
+  END rgb_data[18]
+  PIN rgb_data[19]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 202.490 0.000 202.770 4.000 ;
+    END
+  END rgb_data[19]
+  PIN rgb_data[1]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 225.800 4.000 226.400 ;
+    END
+  END rgb_data[1]
+  PIN rgb_data[20]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 267.030 165.960 271.030 166.560 ;
+    END
+  END rgb_data[20]
+  PIN rgb_data[21]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 40.840 4.000 41.440 ;
+    END
+  END rgb_data[21]
+  PIN rgb_data[22]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 127.970 0.000 128.250 4.000 ;
+    END
+  END rgb_data[22]
+  PIN rgb_data[23]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 267.030 91.160 271.030 91.760 ;
+    END
+  END rgb_data[23]
+  PIN rgb_data[2]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 267.030 129.240 271.030 129.840 ;
+    END
+  END rgb_data[2]
+  PIN rgb_data[3]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 17.570 277.750 17.850 281.750 ;
+    END
+  END rgb_data[3]
+  PIN rgb_data[4]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 193.290 277.750 193.570 281.750 ;
+    END
+  END rgb_data[4]
+  PIN rgb_data[5]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 177.650 0.000 177.930 4.000 ;
+    END
+  END rgb_data[5]
+  PIN rgb_data[6]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 142.690 277.750 142.970 281.750 ;
+    END
+  END rgb_data[6]
+  PIN rgb_data[7]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 262.520 4.000 263.120 ;
+    END
+  END rgb_data[7]
+  PIN rgb_data[8]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 68.170 277.750 68.450 281.750 ;
+    END
+  END rgb_data[8]
+  PIN rgb_data[9]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 267.810 277.750 268.090 281.750 ;
+    END
+  END rgb_data[9]
+  PIN write
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 102.210 0.000 102.490 4.000 ;
+    END
+  END write
+  PIN VPWR
+    DIRECTION INPUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 21.040 10.640 22.640 269.520 ;
+    END
+  END VPWR
+  PIN VGND
+    DIRECTION INPUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 97.840 10.640 99.440 269.520 ;
+    END
+  END VGND
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 265.420 269.365 ;
+      LAYER met1 ;
+        RECT 2.830 4.460 268.110 277.400 ;
+      LAYER met2 ;
+        RECT 2.860 277.470 17.290 277.750 ;
+        RECT 18.130 277.470 42.130 277.750 ;
+        RECT 42.970 277.470 67.890 277.750 ;
+        RECT 68.730 277.470 92.730 277.750 ;
+        RECT 93.570 277.470 117.570 277.750 ;
+        RECT 118.410 277.470 142.410 277.750 ;
+        RECT 143.250 277.470 168.170 277.750 ;
+        RECT 169.010 277.470 193.010 277.750 ;
+        RECT 193.850 277.470 217.850 277.750 ;
+        RECT 218.690 277.470 242.690 277.750 ;
+        RECT 243.530 277.470 267.530 277.750 ;
+        RECT 2.860 4.280 268.080 277.470 ;
+        RECT 3.410 4.000 27.410 4.280 ;
+        RECT 28.250 4.000 52.250 4.280 ;
+        RECT 53.090 4.000 77.090 4.280 ;
+        RECT 77.930 4.000 101.930 4.280 ;
+        RECT 102.770 4.000 127.690 4.280 ;
+        RECT 128.530 4.000 152.530 4.280 ;
+        RECT 153.370 4.000 177.370 4.280 ;
+        RECT 178.210 4.000 202.210 4.280 ;
+        RECT 203.050 4.000 227.970 4.280 ;
+        RECT 228.810 4.000 252.810 4.280 ;
+        RECT 253.650 4.000 268.080 4.280 ;
+      LAYER met3 ;
+        RECT 4.000 263.520 267.030 269.445 ;
+        RECT 4.400 262.120 267.030 263.520 ;
+        RECT 4.000 240.400 267.030 262.120 ;
+        RECT 4.000 239.000 266.630 240.400 ;
+        RECT 4.000 226.800 267.030 239.000 ;
+        RECT 4.400 225.400 267.030 226.800 ;
+        RECT 4.000 203.680 267.030 225.400 ;
+        RECT 4.000 202.280 266.630 203.680 ;
+        RECT 4.000 190.080 267.030 202.280 ;
+        RECT 4.400 188.680 267.030 190.080 ;
+        RECT 4.000 166.960 267.030 188.680 ;
+        RECT 4.000 165.560 266.630 166.960 ;
+        RECT 4.000 152.000 267.030 165.560 ;
+        RECT 4.400 150.600 267.030 152.000 ;
+        RECT 4.000 130.240 267.030 150.600 ;
+        RECT 4.000 128.840 266.630 130.240 ;
+        RECT 4.000 115.280 267.030 128.840 ;
+        RECT 4.400 113.880 267.030 115.280 ;
+        RECT 4.000 92.160 267.030 113.880 ;
+        RECT 4.000 90.760 266.630 92.160 ;
+        RECT 4.000 78.560 267.030 90.760 ;
+        RECT 4.400 77.160 267.030 78.560 ;
+        RECT 4.000 55.440 267.030 77.160 ;
+        RECT 4.000 54.040 266.630 55.440 ;
+        RECT 4.000 41.840 267.030 54.040 ;
+        RECT 4.400 40.440 267.030 41.840 ;
+        RECT 4.000 18.720 267.030 40.440 ;
+        RECT 4.000 17.320 266.630 18.720 ;
+        RECT 4.000 10.715 267.030 17.320 ;
+      LAYER met4 ;
+        RECT 171.415 10.640 253.040 269.520 ;
+  END
+END ws2812
+END LIBRARY
+

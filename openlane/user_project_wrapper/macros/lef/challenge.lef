@@ -1,0 +1,72 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO challenge
+  CLASS BLOCK ;
+  FOREIGN challenge ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 156.720 BY 173.820 ;
+  PIN clk_10
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 156.420 169.820 156.700 173.820 ;
+    END
+  END clk_10
+  PIN led_green
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met2 ;
+        RECT 22.100 169.820 22.380 173.820 ;
+    END
+  END led_green
+  PIN led_red
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met2 ;
+        RECT 134.340 0.000 134.620 4.000 ;
+    END
+  END led_red
+  PIN uart
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 0.020 0.000 0.300 4.000 ;
+    END
+  END uart
+  PIN VPWR
+    DIRECTION INPUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 27.190 10.640 28.790 160.720 ;
+    END
+  END VPWR
+  PIN VGND
+    DIRECTION INPUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 52.490 10.640 54.090 160.720 ;
+    END
+  END VGND
+  OBS
+      LAYER li1 ;
+        RECT 2.690 10.795 154.490 160.565 ;
+      LAYER met1 ;
+        RECT 0.000 10.640 156.720 160.720 ;
+      LAYER met2 ;
+        RECT 0.030 169.540 21.820 169.820 ;
+        RECT 22.660 169.540 156.140 169.820 ;
+        RECT 0.030 4.280 156.690 169.540 ;
+        RECT 0.580 4.000 134.060 4.280 ;
+        RECT 134.900 4.000 156.690 4.280 ;
+      LAYER met3 ;
+        RECT 27.190 10.715 129.990 160.645 ;
+      LAYER met4 ;
+        RECT 77.790 10.640 129.990 160.720 ;
+  END
+END challenge
+END LIBRARY
+

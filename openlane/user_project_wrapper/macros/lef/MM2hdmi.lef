@@ -1,0 +1,288 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO MM2hdmi
+  CLASS BLOCK ;
+  FOREIGN MM2hdmi ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 100.000 BY 200.000 ;
+  PIN clock
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 12.050 196.000 12.330 200.000 ;
+    END
+  END clock
+  PIN io_data[0]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 94.850 0.000 95.130 4.000 ;
+    END
+  END io_data[0]
+  PIN io_data[10]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 17.570 0.000 17.850 4.000 ;
+    END
+  END io_data[10]
+  PIN io_data[11]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 2.850 0.000 3.130 4.000 ;
+    END
+  END io_data[11]
+  PIN io_data[12]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 43.330 196.000 43.610 200.000 ;
+    END
+  END io_data[12]
+  PIN io_data[13]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 69.400 100.000 70.000 ;
+    END
+  END io_data[13]
+  PIN io_data[14]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 115.640 100.000 116.240 ;
+    END
+  END io_data[14]
+  PIN io_data[15]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 48.850 0.000 49.130 4.000 ;
+    END
+  END io_data[15]
+  PIN io_data[1]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 118.360 4.000 118.960 ;
+    END
+  END io_data[1]
+  PIN io_data[2]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 49.000 4.000 49.600 ;
+    END
+  END io_data[2]
+  PIN io_data[3]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 163.240 4.000 163.840 ;
+    END
+  END io_data[3]
+  PIN io_data[4]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 186.360 4.000 186.960 ;
+    END
+  END io_data[4]
+  PIN io_data[5]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 137.400 100.000 138.000 ;
+    END
+  END io_data[5]
+  PIN io_data[6]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 92.520 100.000 93.120 ;
+    END
+  END io_data[6]
+  PIN io_data[7]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 72.120 4.000 72.720 ;
+    END
+  END io_data[7]
+  PIN io_data[8]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 33.210 0.000 33.490 4.000 ;
+    END
+  END io_data[8]
+  PIN io_data[9]
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 58.050 196.000 58.330 200.000 ;
+    END
+  END io_data[9]
+  PIN io_hSync
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 140.120 4.000 140.720 ;
+    END
+  END io_hSync
+  PIN io_newData
+    DIRECTION INPUT ;
+    PORT
+      LAYER met2 ;
+        RECT 27.690 196.000 27.970 200.000 ;
+    END
+  END io_newData
+  PIN io_red[0]
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 95.240 4.000 95.840 ;
+    END
+  END io_red[0]
+  PIN io_red[1]
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met2 ;
+        RECT 73.690 196.000 73.970 200.000 ;
+    END
+  END io_red[1]
+  PIN io_red[2]
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 46.280 100.000 46.880 ;
+    END
+  END io_red[2]
+  PIN io_red[3]
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 23.160 100.000 23.760 ;
+    END
+  END io_red[3]
+  PIN io_red[4]
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met2 ;
+        RECT 89.330 196.000 89.610 200.000 ;
+    END
+  END io_red[4]
+  PIN io_red[5]
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met2 ;
+        RECT 64.490 0.000 64.770 4.000 ;
+    END
+  END io_red[5]
+  PIN io_red[6]
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met2 ;
+        RECT 80.130 0.000 80.410 4.000 ;
+    END
+  END io_red[6]
+  PIN io_red[7]
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 160.520 100.000 161.120 ;
+    END
+  END io_red[7]
+  PIN io_vSync
+    DIRECTION OUTPUT TRISTATE ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 183.640 100.000 184.240 ;
+    END
+  END io_vSync
+  PIN reset
+    DIRECTION INPUT ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 25.880 4.000 26.480 ;
+    END
+  END reset
+  PIN VPWR
+    DIRECTION INPUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 19.545 10.640 21.145 187.920 ;
+    END
+  END VPWR
+  PIN VGND
+    DIRECTION INPUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 34.375 10.640 35.975 187.920 ;
+    END
+  END VGND
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 94.300 187.765 ;
+      LAYER met1 ;
+        RECT 2.830 10.640 95.150 187.920 ;
+      LAYER met2 ;
+        RECT 2.860 195.720 11.770 196.000 ;
+        RECT 12.610 195.720 27.410 196.000 ;
+        RECT 28.250 195.720 43.050 196.000 ;
+        RECT 43.890 195.720 57.770 196.000 ;
+        RECT 58.610 195.720 73.410 196.000 ;
+        RECT 74.250 195.720 89.050 196.000 ;
+        RECT 89.890 195.720 95.120 196.000 ;
+        RECT 2.860 4.280 95.120 195.720 ;
+        RECT 3.410 4.000 17.290 4.280 ;
+        RECT 18.130 4.000 32.930 4.280 ;
+        RECT 33.770 4.000 48.570 4.280 ;
+        RECT 49.410 4.000 64.210 4.280 ;
+        RECT 65.050 4.000 79.850 4.280 ;
+        RECT 80.690 4.000 94.570 4.280 ;
+      LAYER met3 ;
+        RECT 4.000 187.360 96.000 187.845 ;
+        RECT 4.400 185.960 96.000 187.360 ;
+        RECT 4.000 184.640 96.000 185.960 ;
+        RECT 4.000 183.240 95.600 184.640 ;
+        RECT 4.000 164.240 96.000 183.240 ;
+        RECT 4.400 162.840 96.000 164.240 ;
+        RECT 4.000 161.520 96.000 162.840 ;
+        RECT 4.000 160.120 95.600 161.520 ;
+        RECT 4.000 141.120 96.000 160.120 ;
+        RECT 4.400 139.720 96.000 141.120 ;
+        RECT 4.000 138.400 96.000 139.720 ;
+        RECT 4.000 137.000 95.600 138.400 ;
+        RECT 4.000 119.360 96.000 137.000 ;
+        RECT 4.400 117.960 96.000 119.360 ;
+        RECT 4.000 116.640 96.000 117.960 ;
+        RECT 4.000 115.240 95.600 116.640 ;
+        RECT 4.000 96.240 96.000 115.240 ;
+        RECT 4.400 94.840 96.000 96.240 ;
+        RECT 4.000 93.520 96.000 94.840 ;
+        RECT 4.000 92.120 95.600 93.520 ;
+        RECT 4.000 73.120 96.000 92.120 ;
+        RECT 4.400 71.720 96.000 73.120 ;
+        RECT 4.000 70.400 96.000 71.720 ;
+        RECT 4.000 69.000 95.600 70.400 ;
+        RECT 4.000 50.000 96.000 69.000 ;
+        RECT 4.400 48.600 96.000 50.000 ;
+        RECT 4.000 47.280 96.000 48.600 ;
+        RECT 4.000 45.880 95.600 47.280 ;
+        RECT 4.000 26.880 96.000 45.880 ;
+        RECT 4.400 25.480 96.000 26.880 ;
+        RECT 4.000 24.160 96.000 25.480 ;
+        RECT 4.000 22.760 95.600 24.160 ;
+        RECT 4.000 10.715 96.000 22.760 ;
+      LAYER met4 ;
+        RECT 36.375 10.640 80.450 187.920 ;
+  END
+END MM2hdmi
+END LIBRARY
+
