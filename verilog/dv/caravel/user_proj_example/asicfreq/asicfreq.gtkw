@@ -1,0 +1,86 @@
+[dumpfile] "asicfreq.vcd"
+[timestart] 520440000
+[size] 2044 1108
+[pos] -1 -1
+*-22.000000 548687500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] asicfreq_tb.
+[treeopen] asicfreq_tb.uut.
+[treeopen] asicfreq_tb.uut.mprj.
+[treeopen] asicfreq_tb.uut.mprj.mprj.
+[treeopen] asicfreq_tb.uut.mprj.mprj.proj_4.
+[treeopen] asicfreq_tb.uut.soc.
+[treeopen] asicfreq_tb.uut.soc.soc.
+[treeopen] asicfreq_tb.uut.soc.soc.cpu.
+[treeopen] asicfreq_tb.uut.soc.soc.cpu.picorv32_core.
+[sst_width] 285
+[signals_width] 363
+[sst_expanded] 1
+[sst_vpaned_height] 432
+@800200
+-CPU
+@22
+asicfreq_tb.uut.soc.soc.cpu.picorv32_core.dbg_insn_addr[31:0]
+asicfreq_tb.uut.soc.soc.cpu.picorv32_core.dbg_mem_addr[31:0]
+@28
+asicfreq_tb.uut.soc.soc.cpu.picorv32_core.dbg_mem_instr
+@22
+asicfreq_tb.uut.soc.soc.cpu.picorv32_core.dbg_mem_rdata[31:0]
+@28
+asicfreq_tb.uut.soc.soc.cpu.picorv32_core.dbg_mem_ready
+asicfreq_tb.uut.soc.soc.cpu.picorv32_core.dbg_mem_valid
+@22
+asicfreq_tb.uut.soc.soc.cpu.picorv32_core.dbg_mem_wdata[31:0]
+asicfreq_tb.uut.soc.soc.cpu.picorv32_core.dbg_mem_wstrb[3:0]
+@1000200
+-CPU
+@22
+asicfreq_tb.uut.mprj.mprj.active_project[7:0]
+@800200
+-proj_4
+@28
+asicfreq_tb.uut.mprj.mprj.proj_4.rst
+@200
+-
+@29
+asicfreq_tb.uut.mprj.mprj.proj_4.strobe
+@22
+asicfreq_tb.uut.mprj.mprj.proj_4.addr[3:0]
+asicfreq_tb.uut.mprj.mprj.proj_4.value[31:0]
+@200
+-
+@22
+asicfreq_tb.uut.mprj.mprj.proj_4.oc[31:0]
+asicfreq_tb.uut.mprj.mprj.proj_4.o[31:0]
+asicfreq_tb.uut.mprj.mprj.proj_4.f_meter_period[31:0]
+asicfreq_tb.uut.mprj.mprj.proj_4.f_meter.period_counter[31:0]
+@200
+-
+@22
+asicfreq_tb.uut.mprj.mprj.proj_4.col_drvs[8:0]
+@28
+asicfreq_tb.uut.mprj.mprj.proj_4.seg_man_mode
+@22
+asicfreq_tb.uut.mprj.mprj.proj_4.seg_man_value[35:0]
+@c00022
+asicfreq_tb.uut.mprj.mprj.proj_4.seven_seg_seg_drvs[7:0]
+@28
+(0)asicfreq_tb.uut.mprj.mprj.proj_4.seven_seg_seg_drvs[7:0]
+(1)asicfreq_tb.uut.mprj.mprj.proj_4.seven_seg_seg_drvs[7:0]
+(2)asicfreq_tb.uut.mprj.mprj.proj_4.seven_seg_seg_drvs[7:0]
+(3)asicfreq_tb.uut.mprj.mprj.proj_4.seven_seg_seg_drvs[7:0]
+(4)asicfreq_tb.uut.mprj.mprj.proj_4.seven_seg_seg_drvs[7:0]
+(5)asicfreq_tb.uut.mprj.mprj.proj_4.seven_seg_seg_drvs[7:0]
+(6)asicfreq_tb.uut.mprj.mprj.proj_4.seven_seg_seg_drvs[7:0]
+(7)asicfreq_tb.uut.mprj.mprj.proj_4.seven_seg_seg_drvs[7:0]
+@1401200
+-group_end
+@200
+-
+@820
+asicfreq_tb.uut.mprj.mprj.proj_4.serial.uart.tx_data[7:0]
+@28
+asicfreq_tb.uut.mprj.mprj.proj_4.serial_tx_out
+@1000200
+-proj_4
+[pattern_trace] 1
+[pattern_trace] 0
