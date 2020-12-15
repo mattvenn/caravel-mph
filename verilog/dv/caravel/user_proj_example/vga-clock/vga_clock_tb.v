@@ -16,28 +16,16 @@ module vga_clock_tb;
     wire [5:0] rrggbb;
     wire hsync, vsync;
 
-    assign hsync = uut.gpio_control_in[11].pad_gpio_out;
-    assign vsync = uut.gpio_control_in[12].pad_gpio_out;
-    assign rrggbb = {
-        uut.gpio_control_in[13].pad_gpio_out,
-        uut.gpio_control_in[14].pad_gpio_out,
-        uut.gpio_control_in[15].pad_gpio_out,
-        uut.gpio_control_in[16].pad_gpio_out,
-        uut.gpio_control_in[17].pad_gpio_out,
-        uut.gpio_control_in[18].pad_gpio_out
-    };
+    assign hsync = mprj_io[11];
+    assign vsync = mprj_io[12];
+    assign rrggbb = mprj_io[18:13];
 
     reg adj_hrs = 0;
     reg adj_min = 0;
     reg adj_sec = 0;
-   assign mprj_io[8] = adj_hrs;
-   assign mprj_io[9] = adj_min;
-   assign mprj_io[10] = adj_sec;
-/* this doesn't work
-    assign uut.gpio_control_in[ 8].pad_gpio_in = adj_hrs;
-    assign uut.gpio_control_in[ 9].pad_gpio_in = adj_min;
-    assign uut.gpio_control_in[10].pad_gpio_in = adj_sec;
-    */
+    assign mprj_io[8] = adj_hrs;
+    assign mprj_io[9] = adj_min;
+    assign mprj_io[10] = adj_sec;
 
     // External clock is used by default.  Make this artificially fast for the
     // simulation.  Normally this would be a slow clock and the digital PLL
