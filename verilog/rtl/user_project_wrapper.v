@@ -1,4 +1,5 @@
 `default_nettype none
+`include "multi_project_harness/includes.v"
 `ifdef COCOTB_SIM
     `define MPRJ_IO_PADS 38
 `endif

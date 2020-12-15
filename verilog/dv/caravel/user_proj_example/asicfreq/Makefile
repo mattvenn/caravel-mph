@@ -15,7 +15,7 @@ all:  ${PATTERN:=.vcd}
 hex:  ${PATTERN:=.hex}
 
 %.vvp: %_tb.v %.hex
-	iverilog -DFUNCTIONAL -I $(BEHAVIOURAL_MODELS) \
+	iverilog -DSIM -DFUNCTIONAL -I $(BEHAVIOURAL_MODELS) \
 	-I $(PDK_PATH) -I $(RTL_PATH) \
 	$< -o $@
 

@@ -16,15 +16,7 @@ module seven_segment_tb;
     wire [6:0] segments;
 
     
-    assign segments = { 
-        uut.gpio_control_in[14].pad_gpio_out,
-        uut.gpio_control_in[13].pad_gpio_out,
-        uut.gpio_control_in[12].pad_gpio_out,
-        uut.gpio_control_in[11].pad_gpio_out,
-        uut.gpio_control_in[10].pad_gpio_out,
-        uut.gpio_control_in[ 9].pad_gpio_out,
-        uut.gpio_control_in[ 8].pad_gpio_out
-        };
+    assign segments = mprj_io[14:8];
 
     // External clock is used by default.  Make this artificially fast for the
     // simulation.  Normally this would be a slow clock and the digital PLL
