@@ -11,6 +11,10 @@
 * Full system tests for each sub project: verilog/dv/caravel/user_proj_example
 * Separate projects: run make sim in root directory of multi_project_harness: https://github.com/mattvenn/multi-project-harness/blob/separate-macro/test_harness.py
 
+# OpenLane Configs
+
+All the OpenLane configs for each project are here: https://github.com/mattvenn/multi-project-harness/tree/main/openlane/macroconfig
+
 # Submodules
 
 ## seven-segment-seconds
