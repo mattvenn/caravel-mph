@@ -14,11 +14,20 @@ set ::env(FP_DEF_TEMPATE) $script_dir/../../def/user_project_wrapper_empty.def
 
 apply_def_template
 
-add_macro_placement mprj 1150 1700 N
+add_macro_placement proj_0 430  2600   N   
+add_macro_placement proj_1 360  1700   N   
+add_macro_placement proj_2 2300 1700    N   
+add_macro_placement proj_3 1000  1700   N   
+add_macro_placement proj_4 1500  2500   N   
+add_macro_placement proj_5 1800  1800  N   
+add_macro_placement proj_6 2400  2600  N   
+add_macro_placement proj_7 1000 2600  N   
+add_macro_placement mprj   670  600   N   
+
 
 manual_macro_placement f
 
-set ::env(_SPACING) 1.6
+set ::env(_SPACING) 1.7
 set ::env(_WIDTH) 3
 
 set power_domains [list {vccd1 vssd1} {vccd2 vssd2} {vdda1 vssa1} {vdda2 vssa2}]
@@ -45,6 +54,7 @@ foreach domain $power_domains {
 	set ::env(_H_PDN_OFFSET) [expr $::env(_H_PDN_OFFSET)+6*$::env(_WIDTH)]
 }
 
+add_route_obs
 global_routing_or
 detailed_routing
 
