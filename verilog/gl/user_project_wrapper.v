@@ -8,6 +8,696 @@ module user_project_wrapper(user_clock2, wb_clk_i, wb_rst_i, wbs_ack_o, wbs_cyc_
   input [127:0] la_data_in;
   output [127:0] la_data_out;
   input [127:0] la_oen;
+  wire proj0_clk;
+  wire \proj0_io_in[0] ;
+  wire \proj0_io_in[10] ;
+  wire \proj0_io_in[11] ;
+  wire \proj0_io_in[12] ;
+  wire \proj0_io_in[13] ;
+  wire \proj0_io_in[14] ;
+  wire \proj0_io_in[15] ;
+  wire \proj0_io_in[16] ;
+  wire \proj0_io_in[17] ;
+  wire \proj0_io_in[18] ;
+  wire \proj0_io_in[19] ;
+  wire \proj0_io_in[1] ;
+  wire \proj0_io_in[20] ;
+  wire \proj0_io_in[21] ;
+  wire \proj0_io_in[22] ;
+  wire \proj0_io_in[23] ;
+  wire \proj0_io_in[24] ;
+  wire \proj0_io_in[25] ;
+  wire \proj0_io_in[26] ;
+  wire \proj0_io_in[27] ;
+  wire \proj0_io_in[28] ;
+  wire \proj0_io_in[29] ;
+  wire \proj0_io_in[2] ;
+  wire \proj0_io_in[30] ;
+  wire \proj0_io_in[31] ;
+  wire \proj0_io_in[32] ;
+  wire \proj0_io_in[33] ;
+  wire \proj0_io_in[34] ;
+  wire \proj0_io_in[35] ;
+  wire \proj0_io_in[36] ;
+  wire \proj0_io_in[37] ;
+  wire \proj0_io_in[3] ;
+  wire \proj0_io_in[4] ;
+  wire \proj0_io_in[5] ;
+  wire \proj0_io_in[6] ;
+  wire \proj0_io_in[7] ;
+  wire \proj0_io_in[8] ;
+  wire \proj0_io_in[9] ;
+  wire \proj0_io_out[0] ;
+  wire \proj0_io_out[10] ;
+  wire \proj0_io_out[11] ;
+  wire \proj0_io_out[12] ;
+  wire \proj0_io_out[13] ;
+  wire \proj0_io_out[14] ;
+  wire \proj0_io_out[15] ;
+  wire \proj0_io_out[16] ;
+  wire \proj0_io_out[17] ;
+  wire \proj0_io_out[18] ;
+  wire \proj0_io_out[19] ;
+  wire \proj0_io_out[1] ;
+  wire \proj0_io_out[20] ;
+  wire \proj0_io_out[21] ;
+  wire \proj0_io_out[22] ;
+  wire \proj0_io_out[23] ;
+  wire \proj0_io_out[24] ;
+  wire \proj0_io_out[25] ;
+  wire \proj0_io_out[26] ;
+  wire \proj0_io_out[27] ;
+  wire \proj0_io_out[28] ;
+  wire \proj0_io_out[29] ;
+  wire \proj0_io_out[2] ;
+  wire \proj0_io_out[30] ;
+  wire \proj0_io_out[31] ;
+  wire \proj0_io_out[32] ;
+  wire \proj0_io_out[33] ;
+  wire \proj0_io_out[34] ;
+  wire \proj0_io_out[35] ;
+  wire \proj0_io_out[36] ;
+  wire \proj0_io_out[37] ;
+  wire \proj0_io_out[3] ;
+  wire \proj0_io_out[4] ;
+  wire \proj0_io_out[5] ;
+  wire \proj0_io_out[6] ;
+  wire \proj0_io_out[7] ;
+  wire \proj0_io_out[8] ;
+  wire \proj0_io_out[9] ;
+  wire proj0_reset;
+  wire proj0_wb_update;
+  wire proj1_clk;
+  wire \proj1_io_in[0] ;
+  wire \proj1_io_in[10] ;
+  wire \proj1_io_in[11] ;
+  wire \proj1_io_in[12] ;
+  wire \proj1_io_in[13] ;
+  wire \proj1_io_in[14] ;
+  wire \proj1_io_in[15] ;
+  wire \proj1_io_in[16] ;
+  wire \proj1_io_in[17] ;
+  wire \proj1_io_in[18] ;
+  wire \proj1_io_in[19] ;
+  wire \proj1_io_in[1] ;
+  wire \proj1_io_in[20] ;
+  wire \proj1_io_in[21] ;
+  wire \proj1_io_in[22] ;
+  wire \proj1_io_in[23] ;
+  wire \proj1_io_in[24] ;
+  wire \proj1_io_in[25] ;
+  wire \proj1_io_in[26] ;
+  wire \proj1_io_in[27] ;
+  wire \proj1_io_in[28] ;
+  wire \proj1_io_in[29] ;
+  wire \proj1_io_in[2] ;
+  wire \proj1_io_in[30] ;
+  wire \proj1_io_in[31] ;
+  wire \proj1_io_in[32] ;
+  wire \proj1_io_in[33] ;
+  wire \proj1_io_in[34] ;
+  wire \proj1_io_in[35] ;
+  wire \proj1_io_in[36] ;
+  wire \proj1_io_in[37] ;
+  wire \proj1_io_in[3] ;
+  wire \proj1_io_in[4] ;
+  wire \proj1_io_in[5] ;
+  wire \proj1_io_in[6] ;
+  wire \proj1_io_in[7] ;
+  wire \proj1_io_in[8] ;
+  wire \proj1_io_in[9] ;
+  wire \proj1_io_out[0] ;
+  wire \proj1_io_out[10] ;
+  wire \proj1_io_out[11] ;
+  wire \proj1_io_out[12] ;
+  wire \proj1_io_out[13] ;
+  wire \proj1_io_out[14] ;
+  wire \proj1_io_out[15] ;
+  wire \proj1_io_out[16] ;
+  wire \proj1_io_out[17] ;
+  wire \proj1_io_out[18] ;
+  wire \proj1_io_out[19] ;
+  wire \proj1_io_out[1] ;
+  wire \proj1_io_out[20] ;
+  wire \proj1_io_out[21] ;
+  wire \proj1_io_out[22] ;
+  wire \proj1_io_out[23] ;
+  wire \proj1_io_out[24] ;
+  wire \proj1_io_out[25] ;
+  wire \proj1_io_out[26] ;
+  wire \proj1_io_out[27] ;
+  wire \proj1_io_out[28] ;
+  wire \proj1_io_out[29] ;
+  wire \proj1_io_out[2] ;
+  wire \proj1_io_out[30] ;
+  wire \proj1_io_out[31] ;
+  wire \proj1_io_out[32] ;
+  wire \proj1_io_out[33] ;
+  wire \proj1_io_out[34] ;
+  wire \proj1_io_out[35] ;
+  wire \proj1_io_out[36] ;
+  wire \proj1_io_out[37] ;
+  wire \proj1_io_out[3] ;
+  wire \proj1_io_out[4] ;
+  wire \proj1_io_out[5] ;
+  wire \proj1_io_out[6] ;
+  wire \proj1_io_out[7] ;
+  wire \proj1_io_out[8] ;
+  wire \proj1_io_out[9] ;
+  wire proj1_reset;
+  wire proj1_wb_update;
+  wire proj2_clk;
+  wire \proj2_io_in[0] ;
+  wire \proj2_io_in[10] ;
+  wire \proj2_io_in[11] ;
+  wire \proj2_io_in[12] ;
+  wire \proj2_io_in[13] ;
+  wire \proj2_io_in[14] ;
+  wire \proj2_io_in[15] ;
+  wire \proj2_io_in[16] ;
+  wire \proj2_io_in[17] ;
+  wire \proj2_io_in[18] ;
+  wire \proj2_io_in[19] ;
+  wire \proj2_io_in[1] ;
+  wire \proj2_io_in[20] ;
+  wire \proj2_io_in[21] ;
+  wire \proj2_io_in[22] ;
+  wire \proj2_io_in[23] ;
+  wire \proj2_io_in[24] ;
+  wire \proj2_io_in[25] ;
+  wire \proj2_io_in[26] ;
+  wire \proj2_io_in[27] ;
+  wire \proj2_io_in[28] ;
+  wire \proj2_io_in[29] ;
+  wire \proj2_io_in[2] ;
+  wire \proj2_io_in[30] ;
+  wire \proj2_io_in[31] ;
+  wire \proj2_io_in[32] ;
+  wire \proj2_io_in[33] ;
+  wire \proj2_io_in[34] ;
+  wire \proj2_io_in[35] ;
+  wire \proj2_io_in[36] ;
+  wire \proj2_io_in[37] ;
+  wire \proj2_io_in[3] ;
+  wire \proj2_io_in[4] ;
+  wire \proj2_io_in[5] ;
+  wire \proj2_io_in[6] ;
+  wire \proj2_io_in[7] ;
+  wire \proj2_io_in[8] ;
+  wire \proj2_io_in[9] ;
+  wire \proj2_io_out[0] ;
+  wire \proj2_io_out[10] ;
+  wire \proj2_io_out[11] ;
+  wire \proj2_io_out[12] ;
+  wire \proj2_io_out[13] ;
+  wire \proj2_io_out[14] ;
+  wire \proj2_io_out[15] ;
+  wire \proj2_io_out[16] ;
+  wire \proj2_io_out[17] ;
+  wire \proj2_io_out[18] ;
+  wire \proj2_io_out[19] ;
+  wire \proj2_io_out[1] ;
+  wire \proj2_io_out[20] ;
+  wire \proj2_io_out[21] ;
+  wire \proj2_io_out[22] ;
+  wire \proj2_io_out[23] ;
+  wire \proj2_io_out[24] ;
+  wire \proj2_io_out[25] ;
+  wire \proj2_io_out[26] ;
+  wire \proj2_io_out[27] ;
+  wire \proj2_io_out[28] ;
+  wire \proj2_io_out[29] ;
+  wire \proj2_io_out[2] ;
+  wire \proj2_io_out[30] ;
+  wire \proj2_io_out[31] ;
+  wire \proj2_io_out[32] ;
+  wire \proj2_io_out[33] ;
+  wire \proj2_io_out[34] ;
+  wire \proj2_io_out[35] ;
+  wire \proj2_io_out[36] ;
+  wire \proj2_io_out[37] ;
+  wire \proj2_io_out[3] ;
+  wire \proj2_io_out[4] ;
+  wire \proj2_io_out[5] ;
+  wire \proj2_io_out[6] ;
+  wire \proj2_io_out[7] ;
+  wire \proj2_io_out[8] ;
+  wire \proj2_io_out[9] ;
+  wire proj2_reset;
+  wire proj3_clk;
+  wire \proj3_io_in[0] ;
+  wire \proj3_io_in[10] ;
+  wire \proj3_io_in[11] ;
+  wire \proj3_io_in[12] ;
+  wire \proj3_io_in[13] ;
+  wire \proj3_io_in[14] ;
+  wire \proj3_io_in[15] ;
+  wire \proj3_io_in[16] ;
+  wire \proj3_io_in[17] ;
+  wire \proj3_io_in[18] ;
+  wire \proj3_io_in[19] ;
+  wire \proj3_io_in[1] ;
+  wire \proj3_io_in[20] ;
+  wire \proj3_io_in[21] ;
+  wire \proj3_io_in[22] ;
+  wire \proj3_io_in[23] ;
+  wire \proj3_io_in[24] ;
+  wire \proj3_io_in[25] ;
+  wire \proj3_io_in[26] ;
+  wire \proj3_io_in[27] ;
+  wire \proj3_io_in[28] ;
+  wire \proj3_io_in[29] ;
+  wire \proj3_io_in[2] ;
+  wire \proj3_io_in[30] ;
+  wire \proj3_io_in[31] ;
+  wire \proj3_io_in[32] ;
+  wire \proj3_io_in[33] ;
+  wire \proj3_io_in[34] ;
+  wire \proj3_io_in[35] ;
+  wire \proj3_io_in[36] ;
+  wire \proj3_io_in[37] ;
+  wire \proj3_io_in[3] ;
+  wire \proj3_io_in[4] ;
+  wire \proj3_io_in[5] ;
+  wire \proj3_io_in[6] ;
+  wire \proj3_io_in[7] ;
+  wire \proj3_io_in[8] ;
+  wire \proj3_io_in[9] ;
+  wire \proj3_io_out[0] ;
+  wire \proj3_io_out[10] ;
+  wire \proj3_io_out[11] ;
+  wire \proj3_io_out[12] ;
+  wire \proj3_io_out[13] ;
+  wire \proj3_io_out[14] ;
+  wire \proj3_io_out[15] ;
+  wire \proj3_io_out[16] ;
+  wire \proj3_io_out[17] ;
+  wire \proj3_io_out[18] ;
+  wire \proj3_io_out[19] ;
+  wire \proj3_io_out[1] ;
+  wire \proj3_io_out[20] ;
+  wire \proj3_io_out[21] ;
+  wire \proj3_io_out[22] ;
+  wire \proj3_io_out[23] ;
+  wire \proj3_io_out[24] ;
+  wire \proj3_io_out[25] ;
+  wire \proj3_io_out[26] ;
+  wire \proj3_io_out[27] ;
+  wire \proj3_io_out[28] ;
+  wire \proj3_io_out[29] ;
+  wire \proj3_io_out[2] ;
+  wire \proj3_io_out[30] ;
+  wire \proj3_io_out[31] ;
+  wire \proj3_io_out[32] ;
+  wire \proj3_io_out[33] ;
+  wire \proj3_io_out[34] ;
+  wire \proj3_io_out[35] ;
+  wire \proj3_io_out[36] ;
+  wire \proj3_io_out[37] ;
+  wire \proj3_io_out[3] ;
+  wire \proj3_io_out[4] ;
+  wire \proj3_io_out[5] ;
+  wire \proj3_io_out[6] ;
+  wire \proj3_io_out[7] ;
+  wire \proj3_io_out[8] ;
+  wire \proj3_io_out[9] ;
+  wire proj3_reset;
+  wire proj4_clk;
+  wire \proj4_cnt[0] ;
+  wire \proj4_cnt[10] ;
+  wire \proj4_cnt[11] ;
+  wire \proj4_cnt[12] ;
+  wire \proj4_cnt[13] ;
+  wire \proj4_cnt[14] ;
+  wire \proj4_cnt[15] ;
+  wire \proj4_cnt[16] ;
+  wire \proj4_cnt[17] ;
+  wire \proj4_cnt[18] ;
+  wire \proj4_cnt[19] ;
+  wire \proj4_cnt[1] ;
+  wire \proj4_cnt[20] ;
+  wire \proj4_cnt[21] ;
+  wire \proj4_cnt[22] ;
+  wire \proj4_cnt[23] ;
+  wire \proj4_cnt[24] ;
+  wire \proj4_cnt[25] ;
+  wire \proj4_cnt[26] ;
+  wire \proj4_cnt[27] ;
+  wire \proj4_cnt[28] ;
+  wire \proj4_cnt[29] ;
+  wire \proj4_cnt[2] ;
+  wire \proj4_cnt[30] ;
+  wire \proj4_cnt[31] ;
+  wire \proj4_cnt[3] ;
+  wire \proj4_cnt[4] ;
+  wire \proj4_cnt[5] ;
+  wire \proj4_cnt[6] ;
+  wire \proj4_cnt[7] ;
+  wire \proj4_cnt[8] ;
+  wire \proj4_cnt[9] ;
+  wire \proj4_cnt_cont[0] ;
+  wire \proj4_cnt_cont[10] ;
+  wire \proj4_cnt_cont[11] ;
+  wire \proj4_cnt_cont[12] ;
+  wire \proj4_cnt_cont[13] ;
+  wire \proj4_cnt_cont[14] ;
+  wire \proj4_cnt_cont[15] ;
+  wire \proj4_cnt_cont[16] ;
+  wire \proj4_cnt_cont[17] ;
+  wire \proj4_cnt_cont[18] ;
+  wire \proj4_cnt_cont[19] ;
+  wire \proj4_cnt_cont[1] ;
+  wire \proj4_cnt_cont[20] ;
+  wire \proj4_cnt_cont[21] ;
+  wire \proj4_cnt_cont[22] ;
+  wire \proj4_cnt_cont[23] ;
+  wire \proj4_cnt_cont[24] ;
+  wire \proj4_cnt_cont[25] ;
+  wire \proj4_cnt_cont[26] ;
+  wire \proj4_cnt_cont[27] ;
+  wire \proj4_cnt_cont[28] ;
+  wire \proj4_cnt_cont[29] ;
+  wire \proj4_cnt_cont[2] ;
+  wire \proj4_cnt_cont[30] ;
+  wire \proj4_cnt_cont[31] ;
+  wire \proj4_cnt_cont[3] ;
+  wire \proj4_cnt_cont[4] ;
+  wire \proj4_cnt_cont[5] ;
+  wire \proj4_cnt_cont[6] ;
+  wire \proj4_cnt_cont[7] ;
+  wire \proj4_cnt_cont[8] ;
+  wire \proj4_cnt_cont[9] ;
+  wire \proj4_io_in[0] ;
+  wire \proj4_io_in[10] ;
+  wire \proj4_io_in[11] ;
+  wire \proj4_io_in[12] ;
+  wire \proj4_io_in[13] ;
+  wire \proj4_io_in[14] ;
+  wire \proj4_io_in[15] ;
+  wire \proj4_io_in[16] ;
+  wire \proj4_io_in[17] ;
+  wire \proj4_io_in[18] ;
+  wire \proj4_io_in[19] ;
+  wire \proj4_io_in[1] ;
+  wire \proj4_io_in[20] ;
+  wire \proj4_io_in[21] ;
+  wire \proj4_io_in[22] ;
+  wire \proj4_io_in[23] ;
+  wire \proj4_io_in[24] ;
+  wire \proj4_io_in[25] ;
+  wire \proj4_io_in[26] ;
+  wire \proj4_io_in[27] ;
+  wire \proj4_io_in[28] ;
+  wire \proj4_io_in[29] ;
+  wire \proj4_io_in[2] ;
+  wire \proj4_io_in[30] ;
+  wire \proj4_io_in[31] ;
+  wire \proj4_io_in[32] ;
+  wire \proj4_io_in[33] ;
+  wire \proj4_io_in[34] ;
+  wire \proj4_io_in[35] ;
+  wire \proj4_io_in[36] ;
+  wire \proj4_io_in[37] ;
+  wire \proj4_io_in[3] ;
+  wire \proj4_io_in[4] ;
+  wire \proj4_io_in[5] ;
+  wire \proj4_io_in[6] ;
+  wire \proj4_io_in[7] ;
+  wire \proj4_io_in[8] ;
+  wire \proj4_io_in[9] ;
+  wire \proj4_io_out[0] ;
+  wire \proj4_io_out[10] ;
+  wire \proj4_io_out[11] ;
+  wire \proj4_io_out[12] ;
+  wire \proj4_io_out[13] ;
+  wire \proj4_io_out[14] ;
+  wire \proj4_io_out[15] ;
+  wire \proj4_io_out[16] ;
+  wire \proj4_io_out[17] ;
+  wire \proj4_io_out[18] ;
+  wire \proj4_io_out[19] ;
+  wire \proj4_io_out[1] ;
+  wire \proj4_io_out[20] ;
+  wire \proj4_io_out[21] ;
+  wire \proj4_io_out[22] ;
+  wire \proj4_io_out[23] ;
+  wire \proj4_io_out[24] ;
+  wire \proj4_io_out[25] ;
+  wire \proj4_io_out[26] ;
+  wire \proj4_io_out[27] ;
+  wire \proj4_io_out[28] ;
+  wire \proj4_io_out[29] ;
+  wire \proj4_io_out[2] ;
+  wire \proj4_io_out[30] ;
+  wire \proj4_io_out[31] ;
+  wire \proj4_io_out[32] ;
+  wire \proj4_io_out[33] ;
+  wire \proj4_io_out[34] ;
+  wire \proj4_io_out[35] ;
+  wire \proj4_io_out[36] ;
+  wire \proj4_io_out[37] ;
+  wire \proj4_io_out[3] ;
+  wire \proj4_io_out[4] ;
+  wire \proj4_io_out[5] ;
+  wire \proj4_io_out[6] ;
+  wire \proj4_io_out[7] ;
+  wire \proj4_io_out[8] ;
+  wire \proj4_io_out[9] ;
+  wire proj4_reset;
+  wire proj4_wb_update;
+  wire proj5_clk;
+  wire \proj5_io_in[0] ;
+  wire \proj5_io_in[10] ;
+  wire \proj5_io_in[11] ;
+  wire \proj5_io_in[12] ;
+  wire \proj5_io_in[13] ;
+  wire \proj5_io_in[14] ;
+  wire \proj5_io_in[15] ;
+  wire \proj5_io_in[16] ;
+  wire \proj5_io_in[17] ;
+  wire \proj5_io_in[18] ;
+  wire \proj5_io_in[19] ;
+  wire \proj5_io_in[1] ;
+  wire \proj5_io_in[20] ;
+  wire \proj5_io_in[21] ;
+  wire \proj5_io_in[22] ;
+  wire \proj5_io_in[23] ;
+  wire \proj5_io_in[24] ;
+  wire \proj5_io_in[25] ;
+  wire \proj5_io_in[26] ;
+  wire \proj5_io_in[27] ;
+  wire \proj5_io_in[28] ;
+  wire \proj5_io_in[29] ;
+  wire \proj5_io_in[2] ;
+  wire \proj5_io_in[30] ;
+  wire \proj5_io_in[31] ;
+  wire \proj5_io_in[32] ;
+  wire \proj5_io_in[33] ;
+  wire \proj5_io_in[34] ;
+  wire \proj5_io_in[35] ;
+  wire \proj5_io_in[36] ;
+  wire \proj5_io_in[37] ;
+  wire \proj5_io_in[3] ;
+  wire \proj5_io_in[4] ;
+  wire \proj5_io_in[5] ;
+  wire \proj5_io_in[6] ;
+  wire \proj5_io_in[7] ;
+  wire \proj5_io_in[8] ;
+  wire \proj5_io_in[9] ;
+  wire \proj5_io_out[0] ;
+  wire \proj5_io_out[10] ;
+  wire \proj5_io_out[11] ;
+  wire \proj5_io_out[12] ;
+  wire \proj5_io_out[13] ;
+  wire \proj5_io_out[14] ;
+  wire \proj5_io_out[15] ;
+  wire \proj5_io_out[16] ;
+  wire \proj5_io_out[17] ;
+  wire \proj5_io_out[18] ;
+  wire \proj5_io_out[19] ;
+  wire \proj5_io_out[1] ;
+  wire \proj5_io_out[20] ;
+  wire \proj5_io_out[21] ;
+  wire \proj5_io_out[22] ;
+  wire \proj5_io_out[23] ;
+  wire \proj5_io_out[24] ;
+  wire \proj5_io_out[25] ;
+  wire \proj5_io_out[26] ;
+  wire \proj5_io_out[27] ;
+  wire \proj5_io_out[28] ;
+  wire \proj5_io_out[29] ;
+  wire \proj5_io_out[2] ;
+  wire \proj5_io_out[30] ;
+  wire \proj5_io_out[31] ;
+  wire \proj5_io_out[32] ;
+  wire \proj5_io_out[33] ;
+  wire \proj5_io_out[34] ;
+  wire \proj5_io_out[35] ;
+  wire \proj5_io_out[36] ;
+  wire \proj5_io_out[37] ;
+  wire \proj5_io_out[3] ;
+  wire \proj5_io_out[4] ;
+  wire \proj5_io_out[5] ;
+  wire \proj5_io_out[6] ;
+  wire \proj5_io_out[7] ;
+  wire \proj5_io_out[8] ;
+  wire \proj5_io_out[9] ;
+  wire proj5_reset;
+  wire proj5_wb_update;
+  wire proj6_clk;
+  wire \proj6_io_in[0] ;
+  wire \proj6_io_in[10] ;
+  wire \proj6_io_in[11] ;
+  wire \proj6_io_in[12] ;
+  wire \proj6_io_in[13] ;
+  wire \proj6_io_in[14] ;
+  wire \proj6_io_in[15] ;
+  wire \proj6_io_in[16] ;
+  wire \proj6_io_in[17] ;
+  wire \proj6_io_in[18] ;
+  wire \proj6_io_in[19] ;
+  wire \proj6_io_in[1] ;
+  wire \proj6_io_in[20] ;
+  wire \proj6_io_in[21] ;
+  wire \proj6_io_in[22] ;
+  wire \proj6_io_in[23] ;
+  wire \proj6_io_in[24] ;
+  wire \proj6_io_in[25] ;
+  wire \proj6_io_in[26] ;
+  wire \proj6_io_in[27] ;
+  wire \proj6_io_in[28] ;
+  wire \proj6_io_in[29] ;
+  wire \proj6_io_in[2] ;
+  wire \proj6_io_in[30] ;
+  wire \proj6_io_in[31] ;
+  wire \proj6_io_in[32] ;
+  wire \proj6_io_in[33] ;
+  wire \proj6_io_in[34] ;
+  wire \proj6_io_in[35] ;
+  wire \proj6_io_in[36] ;
+  wire \proj6_io_in[37] ;
+  wire \proj6_io_in[3] ;
+  wire \proj6_io_in[4] ;
+  wire \proj6_io_in[5] ;
+  wire \proj6_io_in[6] ;
+  wire \proj6_io_in[7] ;
+  wire \proj6_io_in[8] ;
+  wire \proj6_io_in[9] ;
+  wire \proj6_io_out[0] ;
+  wire \proj6_io_out[10] ;
+  wire \proj6_io_out[11] ;
+  wire \proj6_io_out[12] ;
+  wire \proj6_io_out[13] ;
+  wire \proj6_io_out[14] ;
+  wire \proj6_io_out[15] ;
+  wire \proj6_io_out[16] ;
+  wire \proj6_io_out[17] ;
+  wire \proj6_io_out[18] ;
+  wire \proj6_io_out[19] ;
+  wire \proj6_io_out[1] ;
+  wire \proj6_io_out[20] ;
+  wire \proj6_io_out[21] ;
+  wire \proj6_io_out[22] ;
+  wire \proj6_io_out[23] ;
+  wire \proj6_io_out[24] ;
+  wire \proj6_io_out[25] ;
+  wire \proj6_io_out[26] ;
+  wire \proj6_io_out[27] ;
+  wire \proj6_io_out[28] ;
+  wire \proj6_io_out[29] ;
+  wire \proj6_io_out[2] ;
+  wire \proj6_io_out[30] ;
+  wire \proj6_io_out[31] ;
+  wire \proj6_io_out[32] ;
+  wire \proj6_io_out[33] ;
+  wire \proj6_io_out[34] ;
+  wire \proj6_io_out[35] ;
+  wire \proj6_io_out[36] ;
+  wire \proj6_io_out[37] ;
+  wire \proj6_io_out[3] ;
+  wire \proj6_io_out[4] ;
+  wire \proj6_io_out[5] ;
+  wire \proj6_io_out[6] ;
+  wire \proj6_io_out[7] ;
+  wire \proj6_io_out[8] ;
+  wire \proj6_io_out[9] ;
+  wire \proj7_io_in[0] ;
+  wire \proj7_io_in[10] ;
+  wire \proj7_io_in[11] ;
+  wire \proj7_io_in[12] ;
+  wire \proj7_io_in[13] ;
+  wire \proj7_io_in[14] ;
+  wire \proj7_io_in[15] ;
+  wire \proj7_io_in[16] ;
+  wire \proj7_io_in[17] ;
+  wire \proj7_io_in[18] ;
+  wire \proj7_io_in[19] ;
+  wire \proj7_io_in[1] ;
+  wire \proj7_io_in[20] ;
+  wire \proj7_io_in[21] ;
+  wire \proj7_io_in[22] ;
+  wire \proj7_io_in[23] ;
+  wire \proj7_io_in[24] ;
+  wire \proj7_io_in[25] ;
+  wire \proj7_io_in[26] ;
+  wire \proj7_io_in[27] ;
+  wire \proj7_io_in[28] ;
+  wire \proj7_io_in[29] ;
+  wire \proj7_io_in[2] ;
+  wire \proj7_io_in[30] ;
+  wire \proj7_io_in[31] ;
+  wire \proj7_io_in[32] ;
+  wire \proj7_io_in[33] ;
+  wire \proj7_io_in[34] ;
+  wire \proj7_io_in[35] ;
+  wire \proj7_io_in[36] ;
+  wire \proj7_io_in[37] ;
+  wire \proj7_io_in[3] ;
+  wire \proj7_io_in[4] ;
+  wire \proj7_io_in[5] ;
+  wire \proj7_io_in[6] ;
+  wire \proj7_io_in[7] ;
+  wire \proj7_io_in[8] ;
+  wire \proj7_io_in[9] ;
+  wire \proj7_io_out[0] ;
+  wire \proj7_io_out[10] ;
+  wire \proj7_io_out[11] ;
+  wire \proj7_io_out[12] ;
+  wire \proj7_io_out[13] ;
+  wire \proj7_io_out[14] ;
+  wire \proj7_io_out[15] ;
+  wire \proj7_io_out[16] ;
+  wire \proj7_io_out[17] ;
+  wire \proj7_io_out[18] ;
+  wire \proj7_io_out[19] ;
+  wire \proj7_io_out[1] ;
+  wire \proj7_io_out[20] ;
+  wire \proj7_io_out[21] ;
+  wire \proj7_io_out[22] ;
+  wire \proj7_io_out[23] ;
+  wire \proj7_io_out[24] ;
+  wire \proj7_io_out[25] ;
+  wire \proj7_io_out[26] ;
+  wire \proj7_io_out[27] ;
+  wire \proj7_io_out[28] ;
+  wire \proj7_io_out[29] ;
+  wire \proj7_io_out[2] ;
+  wire \proj7_io_out[30] ;
+  wire \proj7_io_out[31] ;
+  wire \proj7_io_out[32] ;
+  wire \proj7_io_out[33] ;
+  wire \proj7_io_out[34] ;
+  wire \proj7_io_out[35] ;
+  wire \proj7_io_out[36] ;
+  wire \proj7_io_out[37] ;
+  wire \proj7_io_out[3] ;
+  wire \proj7_io_out[4] ;
+  wire \proj7_io_out[5] ;
+  wire \proj7_io_out[6] ;
+  wire \proj7_io_out[7] ;
+  wire \proj7_io_out[8] ;
+  wire \proj7_io_out[9] ;
+  wire proj7_reset;
   input user_clock2;
   input vccd1;
   input vccd2;
@@ -27,21 +717,51 @@ module user_project_wrapper(user_clock2, wb_clk_i, wb_rst_i, wbs_ack_o, wbs_cyc_
   input [3:0] wbs_sel_i;
   input wbs_stb_i;
   input wbs_we_i;
-  user_proj_example mprj (
+  multi_project_harness mprj (
+    .VGND(vssd1),
+    .VPWR(vccd1),
     .io_in(io_in),
     .io_oeb(io_oeb),
     .io_out(io_out),
     .la_data_in(la_data_in),
     .la_data_out(la_data_out),
     .la_oen(la_oen),
-    .vccd1(vccd1),
-    .vccd2(vccd2),
-    .vdda1(vdda1),
-    .vdda2(vdda2),
-    .vssa1(vssa1),
-    .vssa2(vssa2),
-    .vssd1(vssd1),
-    .vssd2(vssd2),
+    .proj0_clk(proj0_clk),
+    .proj0_io_in({ \proj0_io_in[37] , \proj0_io_in[36] , \proj0_io_in[35] , \proj0_io_in[34] , \proj0_io_in[33] , \proj0_io_in[32] , \proj0_io_in[31] , \proj0_io_in[30] , \proj0_io_in[29] , \proj0_io_in[28] , \proj0_io_in[27] , \proj0_io_in[26] , \proj0_io_in[25] , \proj0_io_in[24] , \proj0_io_in[23] , \proj0_io_in[22] , \proj0_io_in[21] , \proj0_io_in[20] , \proj0_io_in[19] , \proj0_io_in[18] , \proj0_io_in[17] , \proj0_io_in[16] , \proj0_io_in[15] , \proj0_io_in[14] , \proj0_io_in[13] , \proj0_io_in[12] , \proj0_io_in[11] , \proj0_io_in[10] , \proj0_io_in[9] , \proj0_io_in[8] , \proj0_io_in[7] , \proj0_io_in[6] , \proj0_io_in[5] , \proj0_io_in[4] , \proj0_io_in[3] , \proj0_io_in[2] , \proj0_io_in[1] , \proj0_io_in[0]  }),
+    .proj0_io_out({ \proj0_io_out[37] , \proj0_io_out[36] , \proj0_io_out[35] , \proj0_io_out[34] , \proj0_io_out[33] , \proj0_io_out[32] , \proj0_io_out[31] , \proj0_io_out[30] , \proj0_io_out[29] , \proj0_io_out[28] , \proj0_io_out[27] , \proj0_io_out[26] , \proj0_io_out[25] , \proj0_io_out[24] , \proj0_io_out[23] , \proj0_io_out[22] , \proj0_io_out[21] , \proj0_io_out[20] , \proj0_io_out[19] , \proj0_io_out[18] , \proj0_io_out[17] , \proj0_io_out[16] , \proj0_io_out[15] , \proj0_io_out[14] , \proj0_io_out[13] , \proj0_io_out[12] , \proj0_io_out[11] , \proj0_io_out[10] , \proj0_io_out[9] , \proj0_io_out[8] , \proj0_io_out[7] , \proj0_io_out[6] , \proj0_io_out[5] , \proj0_io_out[4] , \proj0_io_out[3] , \proj0_io_out[2] , \proj0_io_out[1] , \proj0_io_out[0]  }),
+    .proj0_reset(proj0_reset),
+    .proj0_wb_update(proj0_wb_update),
+    .proj1_clk(proj1_clk),
+    .proj1_io_in({ \proj1_io_in[37] , \proj1_io_in[36] , \proj1_io_in[35] , \proj1_io_in[34] , \proj1_io_in[33] , \proj1_io_in[32] , \proj1_io_in[31] , \proj1_io_in[30] , \proj1_io_in[29] , \proj1_io_in[28] , \proj1_io_in[27] , \proj1_io_in[26] , \proj1_io_in[25] , \proj1_io_in[24] , \proj1_io_in[23] , \proj1_io_in[22] , \proj1_io_in[21] , \proj1_io_in[20] , \proj1_io_in[19] , \proj1_io_in[18] , \proj1_io_in[17] , \proj1_io_in[16] , \proj1_io_in[15] , \proj1_io_in[14] , \proj1_io_in[13] , \proj1_io_in[12] , \proj1_io_in[11] , \proj1_io_in[10] , \proj1_io_in[9] , \proj1_io_in[8] , \proj1_io_in[7] , \proj1_io_in[6] , \proj1_io_in[5] , \proj1_io_in[4] , \proj1_io_in[3] , \proj1_io_in[2] , \proj1_io_in[1] , \proj1_io_in[0]  }),
+    .proj1_io_out({ \proj1_io_out[37] , \proj1_io_out[36] , \proj1_io_out[35] , \proj1_io_out[34] , \proj1_io_out[33] , \proj1_io_out[32] , \proj1_io_out[31] , \proj1_io_out[30] , \proj1_io_out[29] , \proj1_io_out[28] , \proj1_io_out[27] , \proj1_io_out[26] , \proj1_io_out[25] , \proj1_io_out[24] , \proj1_io_out[23] , \proj1_io_out[22] , \proj1_io_out[21] , \proj1_io_out[20] , \proj1_io_out[19] , \proj1_io_out[18] , \proj1_io_out[17] , \proj1_io_out[16] , \proj1_io_out[15] , \proj1_io_out[14] , \proj1_io_out[13] , \proj1_io_out[12] , \proj1_io_out[11] , \proj1_io_out[10] , \proj1_io_out[9] , \proj1_io_out[8] , \proj1_io_out[7] , \proj1_io_out[6] , \proj1_io_out[5] , \proj1_io_out[4] , \proj1_io_out[3] , \proj1_io_out[2] , \proj1_io_out[1] , \proj1_io_out[0]  }),
+    .proj1_reset(proj1_reset),
+    .proj1_wb_update(proj1_wb_update),
+    .proj2_clk(proj2_clk),
+    .proj2_io_in({ \proj2_io_in[37] , \proj2_io_in[36] , \proj2_io_in[35] , \proj2_io_in[34] , \proj2_io_in[33] , \proj2_io_in[32] , \proj2_io_in[31] , \proj2_io_in[30] , \proj2_io_in[29] , \proj2_io_in[28] , \proj2_io_in[27] , \proj2_io_in[26] , \proj2_io_in[25] , \proj2_io_in[24] , \proj2_io_in[23] , \proj2_io_in[22] , \proj2_io_in[21] , \proj2_io_in[20] , \proj2_io_in[19] , \proj2_io_in[18] , \proj2_io_in[17] , \proj2_io_in[16] , \proj2_io_in[15] , \proj2_io_in[14] , \proj2_io_in[13] , \proj2_io_in[12] , \proj2_io_in[11] , \proj2_io_in[10] , \proj2_io_in[9] , \proj2_io_in[8] , \proj2_io_in[7] , \proj2_io_in[6] , \proj2_io_in[5] , \proj2_io_in[4] , \proj2_io_in[3] , \proj2_io_in[2] , \proj2_io_in[1] , \proj2_io_in[0]  }),
+    .proj2_io_out({ \proj2_io_out[37] , \proj2_io_out[36] , \proj2_io_out[35] , \proj2_io_out[34] , \proj2_io_out[33] , \proj2_io_out[32] , \proj2_io_out[31] , \proj2_io_out[30] , \proj2_io_out[29] , \proj2_io_out[28] , \proj2_io_out[27] , \proj2_io_out[26] , \proj2_io_out[25] , \proj2_io_out[24] , \proj2_io_out[23] , \proj2_io_out[22] , \proj2_io_out[21] , \proj2_io_out[20] , \proj2_io_out[19] , \proj2_io_out[18] , \proj2_io_out[17] , \proj2_io_out[16] , \proj2_io_out[15] , \proj2_io_out[14] , \proj2_io_out[13] , \proj2_io_out[12] , \proj2_io_out[11] , \proj2_io_out[10] , \proj2_io_out[9] , \proj2_io_out[8] , \proj2_io_out[7] , \proj2_io_out[6] , \proj2_io_out[5] , \proj2_io_out[4] , \proj2_io_out[3] , \proj2_io_out[2] , \proj2_io_out[1] , \proj2_io_out[0]  }),
+    .proj2_reset(proj2_reset),
+    .proj3_clk(proj3_clk),
+    .proj3_io_in({ \proj3_io_in[37] , \proj3_io_in[36] , \proj3_io_in[35] , \proj3_io_in[34] , \proj3_io_in[33] , \proj3_io_in[32] , \proj3_io_in[31] , \proj3_io_in[30] , \proj3_io_in[29] , \proj3_io_in[28] , \proj3_io_in[27] , \proj3_io_in[26] , \proj3_io_in[25] , \proj3_io_in[24] , \proj3_io_in[23] , \proj3_io_in[22] , \proj3_io_in[21] , \proj3_io_in[20] , \proj3_io_in[19] , \proj3_io_in[18] , \proj3_io_in[17] , \proj3_io_in[16] , \proj3_io_in[15] , \proj3_io_in[14] , \proj3_io_in[13] , \proj3_io_in[12] , \proj3_io_in[11] , \proj3_io_in[10] , \proj3_io_in[9] , \proj3_io_in[8] , \proj3_io_in[7] , \proj3_io_in[6] , \proj3_io_in[5] , \proj3_io_in[4] , \proj3_io_in[3] , \proj3_io_in[2] , \proj3_io_in[1] , \proj3_io_in[0]  }),
+    .proj3_io_out({ \proj3_io_out[37] , \proj3_io_out[36] , \proj3_io_out[35] , \proj3_io_out[34] , \proj3_io_out[33] , \proj3_io_out[32] , \proj3_io_out[31] , \proj3_io_out[30] , \proj3_io_out[29] , \proj3_io_out[28] , \proj3_io_out[27] , \proj3_io_out[26] , \proj3_io_out[25] , \proj3_io_out[24] , \proj3_io_out[23] , \proj3_io_out[22] , \proj3_io_out[21] , \proj3_io_out[20] , \proj3_io_out[19] , \proj3_io_out[18] , \proj3_io_out[17] , \proj3_io_out[16] , \proj3_io_out[15] , \proj3_io_out[14] , \proj3_io_out[13] , \proj3_io_out[12] , \proj3_io_out[11] , \proj3_io_out[10] , \proj3_io_out[9] , \proj3_io_out[8] , \proj3_io_out[7] , \proj3_io_out[6] , \proj3_io_out[5] , \proj3_io_out[4] , \proj3_io_out[3] , \proj3_io_out[2] , \proj3_io_out[1] , \proj3_io_out[0]  }),
+    .proj3_reset(proj3_reset),
+    .proj4_clk(proj4_clk),
+    .proj4_cnt({ \proj4_cnt[31] , \proj4_cnt[30] , \proj4_cnt[29] , \proj4_cnt[28] , \proj4_cnt[27] , \proj4_cnt[26] , \proj4_cnt[25] , \proj4_cnt[24] , \proj4_cnt[23] , \proj4_cnt[22] , \proj4_cnt[21] , \proj4_cnt[20] , \proj4_cnt[19] , \proj4_cnt[18] , \proj4_cnt[17] , \proj4_cnt[16] , \proj4_cnt[15] , \proj4_cnt[14] , \proj4_cnt[13] , \proj4_cnt[12] , \proj4_cnt[11] , \proj4_cnt[10] , \proj4_cnt[9] , \proj4_cnt[8] , \proj4_cnt[7] , \proj4_cnt[6] , \proj4_cnt[5] , \proj4_cnt[4] , \proj4_cnt[3] , \proj4_cnt[2] , \proj4_cnt[1] , \proj4_cnt[0]  }),
+    .proj4_cnt_cont({ \proj4_cnt_cont[31] , \proj4_cnt_cont[30] , \proj4_cnt_cont[29] , \proj4_cnt_cont[28] , \proj4_cnt_cont[27] , \proj4_cnt_cont[26] , \proj4_cnt_cont[25] , \proj4_cnt_cont[24] , \proj4_cnt_cont[23] , \proj4_cnt_cont[22] , \proj4_cnt_cont[21] , \proj4_cnt_cont[20] , \proj4_cnt_cont[19] , \proj4_cnt_cont[18] , \proj4_cnt_cont[17] , \proj4_cnt_cont[16] , \proj4_cnt_cont[15] , \proj4_cnt_cont[14] , \proj4_cnt_cont[13] , \proj4_cnt_cont[12] , \proj4_cnt_cont[11] , \proj4_cnt_cont[10] , \proj4_cnt_cont[9] , \proj4_cnt_cont[8] , \proj4_cnt_cont[7] , \proj4_cnt_cont[6] , \proj4_cnt_cont[5] , \proj4_cnt_cont[4] , \proj4_cnt_cont[3] , \proj4_cnt_cont[2] , \proj4_cnt_cont[1] , \proj4_cnt_cont[0]  }),
+    .proj4_io_in({ \proj4_io_in[37] , \proj4_io_in[36] , \proj4_io_in[35] , \proj4_io_in[34] , \proj4_io_in[33] , \proj4_io_in[32] , \proj4_io_in[31] , \proj4_io_in[30] , \proj4_io_in[29] , \proj4_io_in[28] , \proj4_io_in[27] , \proj4_io_in[26] , \proj4_io_in[25] , \proj4_io_in[24] , \proj4_io_in[23] , \proj4_io_in[22] , \proj4_io_in[21] , \proj4_io_in[20] , \proj4_io_in[19] , \proj4_io_in[18] , \proj4_io_in[17] , \proj4_io_in[16] , \proj4_io_in[15] , \proj4_io_in[14] , \proj4_io_in[13] , \proj4_io_in[12] , \proj4_io_in[11] , \proj4_io_in[10] , \proj4_io_in[9] , \proj4_io_in[8] , \proj4_io_in[7] , \proj4_io_in[6] , \proj4_io_in[5] , \proj4_io_in[4] , \proj4_io_in[3] , \proj4_io_in[2] , \proj4_io_in[1] , \proj4_io_in[0]  }),
+    .proj4_io_out({ \proj4_io_out[37] , \proj4_io_out[36] , \proj4_io_out[35] , \proj4_io_out[34] , \proj4_io_out[33] , \proj4_io_out[32] , \proj4_io_out[31] , \proj4_io_out[30] , \proj4_io_out[29] , \proj4_io_out[28] , \proj4_io_out[27] , \proj4_io_out[26] , \proj4_io_out[25] , \proj4_io_out[24] , \proj4_io_out[23] , \proj4_io_out[22] , \proj4_io_out[21] , \proj4_io_out[20] , \proj4_io_out[19] , \proj4_io_out[18] , \proj4_io_out[17] , \proj4_io_out[16] , \proj4_io_out[15] , \proj4_io_out[14] , \proj4_io_out[13] , \proj4_io_out[12] , \proj4_io_out[11] , \proj4_io_out[10] , \proj4_io_out[9] , \proj4_io_out[8] , \proj4_io_out[7] , \proj4_io_out[6] , \proj4_io_out[5] , \proj4_io_out[4] , \proj4_io_out[3] , \proj4_io_out[2] , \proj4_io_out[1] , \proj4_io_out[0]  }),
+    .proj4_reset(proj4_reset),
+    .proj4_wb_update(proj4_wb_update),
+    .proj5_clk(proj5_clk),
+    .proj5_io_in({ \proj5_io_in[37] , \proj5_io_in[36] , \proj5_io_in[35] , \proj5_io_in[34] , \proj5_io_in[33] , \proj5_io_in[32] , \proj5_io_in[31] , \proj5_io_in[30] , \proj5_io_in[29] , \proj5_io_in[28] , \proj5_io_in[27] , \proj5_io_in[26] , \proj5_io_in[25] , \proj5_io_in[24] , \proj5_io_in[23] , \proj5_io_in[22] , \proj5_io_in[21] , \proj5_io_in[20] , \proj5_io_in[19] , \proj5_io_in[18] , \proj5_io_in[17] , \proj5_io_in[16] , \proj5_io_in[15] , \proj5_io_in[14] , \proj5_io_in[13] , \proj5_io_in[12] , \proj5_io_in[11] , \proj5_io_in[10] , \proj5_io_in[9] , \proj5_io_in[8] , \proj5_io_in[7] , \proj5_io_in[6] , \proj5_io_in[5] , \proj5_io_in[4] , \proj5_io_in[3] , \proj5_io_in[2] , \proj5_io_in[1] , \proj5_io_in[0]  }),
+    .proj5_io_out({ \proj5_io_out[37] , \proj5_io_out[36] , \proj5_io_out[35] , \proj5_io_out[34] , \proj5_io_out[33] , \proj5_io_out[32] , \proj5_io_out[31] , \proj5_io_out[30] , \proj5_io_out[29] , \proj5_io_out[28] , \proj5_io_out[27] , \proj5_io_out[26] , \proj5_io_out[25] , \proj5_io_out[24] , \proj5_io_out[23] , \proj5_io_out[22] , \proj5_io_out[21] , \proj5_io_out[20] , \proj5_io_out[19] , \proj5_io_out[18] , \proj5_io_out[17] , \proj5_io_out[16] , \proj5_io_out[15] , \proj5_io_out[14] , \proj5_io_out[13] , \proj5_io_out[12] , \proj5_io_out[11] , \proj5_io_out[10] , \proj5_io_out[9] , \proj5_io_out[8] , \proj5_io_out[7] , \proj5_io_out[6] , \proj5_io_out[5] , \proj5_io_out[4] , \proj5_io_out[3] , \proj5_io_out[2] , \proj5_io_out[1] , \proj5_io_out[0]  }),
+    .proj5_reset(proj5_reset),
+    .proj5_wb_update(proj5_wb_update),
+    .proj6_clk(proj6_clk),
+    .proj6_io_in({ \proj6_io_in[37] , \proj6_io_in[36] , \proj6_io_in[35] , \proj6_io_in[34] , \proj6_io_in[33] , \proj6_io_in[32] , \proj6_io_in[31] , \proj6_io_in[30] , \proj6_io_in[29] , \proj6_io_in[28] , \proj6_io_in[27] , \proj6_io_in[26] , \proj6_io_in[25] , \proj6_io_in[24] , \proj6_io_in[23] , \proj6_io_in[22] , \proj6_io_in[21] , \proj6_io_in[20] , \proj6_io_in[19] , \proj6_io_in[18] , \proj6_io_in[17] , \proj6_io_in[16] , \proj6_io_in[15] , \proj6_io_in[14] , \proj6_io_in[13] , \proj6_io_in[12] , \proj6_io_in[11] , \proj6_io_in[10] , \proj6_io_in[9] , \proj6_io_in[8] , \proj6_io_in[7] , \proj6_io_in[6] , \proj6_io_in[5] , \proj6_io_in[4] , \proj6_io_in[3] , \proj6_io_in[2] , \proj6_io_in[1] , \proj6_io_in[0]  }),
+    .proj6_io_out({ \proj6_io_out[37] , \proj6_io_out[36] , \proj6_io_out[35] , \proj6_io_out[34] , \proj6_io_out[33] , \proj6_io_out[32] , \proj6_io_out[31] , \proj6_io_out[30] , \proj6_io_out[29] , \proj6_io_out[28] , \proj6_io_out[27] , \proj6_io_out[26] , \proj6_io_out[25] , \proj6_io_out[24] , \proj6_io_out[23] , \proj6_io_out[22] , \proj6_io_out[21] , \proj6_io_out[20] , \proj6_io_out[19] , \proj6_io_out[18] , \proj6_io_out[17] , \proj6_io_out[16] , \proj6_io_out[15] , \proj6_io_out[14] , \proj6_io_out[13] , \proj6_io_out[12] , \proj6_io_out[11] , \proj6_io_out[10] , \proj6_io_out[9] , \proj6_io_out[8] , \proj6_io_out[7] , \proj6_io_out[6] , \proj6_io_out[5] , \proj6_io_out[4] , \proj6_io_out[3] , \proj6_io_out[2] , \proj6_io_out[1] , \proj6_io_out[0]  }),
+    .proj7_io_in({ \proj7_io_in[37] , \proj7_io_in[36] , \proj7_io_in[35] , \proj7_io_in[34] , \proj7_io_in[33] , \proj7_io_in[32] , \proj7_io_in[31] , \proj7_io_in[30] , \proj7_io_in[29] , \proj7_io_in[28] , \proj7_io_in[27] , \proj7_io_in[26] , \proj7_io_in[25] , \proj7_io_in[24] , \proj7_io_in[23] , \proj7_io_in[22] , \proj7_io_in[21] , \proj7_io_in[20] , \proj7_io_in[19] , \proj7_io_in[18] , \proj7_io_in[17] , \proj7_io_in[16] , \proj7_io_in[15] , \proj7_io_in[14] , \proj7_io_in[13] , \proj7_io_in[12] , \proj7_io_in[11] , \proj7_io_in[10] , \proj7_io_in[9] , \proj7_io_in[8] , \proj7_io_in[7] , \proj7_io_in[6] , \proj7_io_in[5] , \proj7_io_in[4] , \proj7_io_in[3] , \proj7_io_in[2] , \proj7_io_in[1] , \proj7_io_in[0]  }),
+    .proj7_io_out({ \proj7_io_out[37] , \proj7_io_out[36] , \proj7_io_out[35] , \proj7_io_out[34] , \proj7_io_out[33] , \proj7_io_out[32] , \proj7_io_out[31] , \proj7_io_out[30] , \proj7_io_out[29] , \proj7_io_out[28] , \proj7_io_out[27] , \proj7_io_out[26] , \proj7_io_out[25] , \proj7_io_out[24] , \proj7_io_out[23] , \proj7_io_out[22] , \proj7_io_out[21] , \proj7_io_out[20] , \proj7_io_out[19] , \proj7_io_out[18] , \proj7_io_out[17] , \proj7_io_out[16] , \proj7_io_out[15] , \proj7_io_out[14] , \proj7_io_out[13] , \proj7_io_out[12] , \proj7_io_out[11] , \proj7_io_out[10] , \proj7_io_out[9] , \proj7_io_out[8] , \proj7_io_out[7] , \proj7_io_out[6] , \proj7_io_out[5] , \proj7_io_out[4] , \proj7_io_out[3] , \proj7_io_out[2] , \proj7_io_out[1] , \proj7_io_out[0]  }),
+    .proj7_reset(proj7_reset),
     .wb_clk_i(wb_clk_i),
     .wb_rst_i(wb_rst_i),
     .wbs_ack_o(wbs_ack_o),
@@ -52,5 +772,92 @@ module user_project_wrapper(user_clock2, wb_clk_i, wb_rst_i, wbs_ack_o, wbs_cyc_
     .wbs_sel_i(wbs_sel_i),
     .wbs_stb_i(wbs_stb_i),
     .wbs_we_i(wbs_we_i)
+  );
+  seven_segment_seconds proj_0 (
+    .VGND(vssd1),
+    .VPWR(vccd1),
+    .clk(proj0_clk),
+    .compare_in(wbs_dat_i[23:0]),
+    .led_out({ \proj0_io_out[14] , \proj0_io_out[13] , \proj0_io_out[12] , \proj0_io_out[11] , \proj0_io_out[10] , \proj0_io_out[9] , \proj0_io_out[8]  }),
+    .reset(proj0_reset),
+    .update_compare(proj0_wb_update)
+  );
+  ws2812 proj_1 (
+    .VGND(vssd1),
+    .VPWR(vccd1),
+    .clk(proj1_clk),
+    .data(\proj1_io_out[8] ),
+    .led_num(wbs_dat_i[31:24]),
+    .reset(proj1_reset),
+    .rgb_data(wbs_dat_i[23:0]),
+    .write(proj1_wb_update)
+  );
+  vga_clock proj_2 (
+    .VGND(vssd1),
+    .VPWR(vccd1),
+    .adj_hrs(\proj2_io_in[8] ),
+    .adj_min(\proj2_io_in[9] ),
+    .adj_sec(\proj2_io_in[10] ),
+    .clk(proj2_clk),
+    .hsync(\proj2_io_out[11] ),
+    .reset_n(proj2_reset),
+    .rrggbb({ \proj2_io_out[18] , \proj2_io_out[17] , \proj2_io_out[16] , \proj2_io_out[15] , \proj2_io_out[14] , \proj2_io_out[13]  }),
+    .vsync(\proj2_io_out[12] )
+  );
+  spinet5 proj_3 (
+    .VGND(vssd1),
+    .VPWR(vccd1),
+    .clk(proj3_clk),
+    .io_in({ \proj3_io_in[37] , \proj3_io_in[36] , \proj3_io_in[35] , \proj3_io_in[34] , \proj3_io_in[33] , \proj3_io_in[32] , \proj3_io_in[31] , \proj3_io_in[30] , \proj3_io_in[29] , \proj3_io_in[28] , \proj3_io_in[27] , \proj3_io_in[26] , \proj3_io_in[25] , \proj3_io_in[24] , \proj3_io_in[23] , \proj3_io_in[22] , \proj3_io_in[21] , \proj3_io_in[20] , \proj3_io_in[19] , \proj3_io_in[18] , \proj3_io_in[17] , \proj3_io_in[16] , \proj3_io_in[15] , \proj3_io_in[14] , \proj3_io_in[13] , \proj3_io_in[12] , \proj3_io_in[11] , \proj3_io_in[10] , \proj3_io_in[9] , \proj3_io_in[8] , \proj3_io_in[7] , \proj3_io_in[6] , \proj3_io_in[5] , \proj3_io_in[4] , \proj3_io_in[3] , \proj3_io_in[2] , \proj3_io_in[1] , \proj3_io_in[0]  }),
+    .io_out({ \proj3_io_out[37] , \proj3_io_out[36] , \proj3_io_out[35] , \proj3_io_out[34] , \proj3_io_out[33] , \proj3_io_out[32] , \proj3_io_out[31] , \proj3_io_out[30] , \proj3_io_out[29] , \proj3_io_out[28] , \proj3_io_out[27] , \proj3_io_out[26] , \proj3_io_out[25] , \proj3_io_out[24] , \proj3_io_out[23] , \proj3_io_out[22] , \proj3_io_out[21] , \proj3_io_out[20] , \proj3_io_out[19] , \proj3_io_out[18] , \proj3_io_out[17] , \proj3_io_out[16] , \proj3_io_out[15] , \proj3_io_out[14] , \proj3_io_out[13] , \proj3_io_out[12] , \proj3_io_out[11] , \proj3_io_out[10] , \proj3_io_out[9] , \proj3_io_out[8] , \proj3_io_out[7] , \proj3_io_out[6] , \proj3_io_out[5] , \proj3_io_out[4] , \proj3_io_out[3] , \proj3_io_out[2] , \proj3_io_out[1] , \proj3_io_out[0]  }),
+    .rst(proj3_reset)
+  );
+  asic_freq proj_4 (
+    .VGND(vssd1),
+    .VPWR(vccd1),
+    .addr(wbs_adr_i[5:2]),
+    .clk(proj4_clk),
+    .col_drvs({ \proj4_io_out[16] , \proj4_io_out[15] , \proj4_io_out[14] , \proj4_io_out[13] , \proj4_io_out[12] , \proj4_io_out[11] , \proj4_io_out[10] , \proj4_io_out[9] , \proj4_io_out[8]  }),
+    .o({ \proj4_cnt[31] , \proj4_cnt[30] , \proj4_cnt[29] , \proj4_cnt[28] , \proj4_cnt[27] , \proj4_cnt[26] , \proj4_cnt[25] , \proj4_cnt[24] , \proj4_cnt[23] , \proj4_cnt[22] , \proj4_cnt[21] , \proj4_cnt[20] , \proj4_cnt[19] , \proj4_cnt[18] , \proj4_cnt[17] , \proj4_cnt[16] , \proj4_cnt[15] , \proj4_cnt[14] , \proj4_cnt[13] , \proj4_cnt[12] , \proj4_cnt[11] , \proj4_cnt[10] , \proj4_cnt[9] , \proj4_cnt[8] , \proj4_cnt[7] , \proj4_cnt[6] , \proj4_cnt[5] , \proj4_cnt[4] , \proj4_cnt[3] , \proj4_cnt[2] , \proj4_cnt[1] , \proj4_cnt[0]  }),
+    .oc({ \proj4_cnt_cont[31] , \proj4_cnt_cont[30] , \proj4_cnt_cont[29] , \proj4_cnt_cont[28] , \proj4_cnt_cont[27] , \proj4_cnt_cont[26] , \proj4_cnt_cont[25] , \proj4_cnt_cont[24] , \proj4_cnt_cont[23] , \proj4_cnt_cont[22] , \proj4_cnt_cont[21] , \proj4_cnt_cont[20] , \proj4_cnt_cont[19] , \proj4_cnt_cont[18] , \proj4_cnt_cont[17] , \proj4_cnt_cont[16] , \proj4_cnt_cont[15] , \proj4_cnt_cont[14] , \proj4_cnt_cont[13] , \proj4_cnt_cont[12] , \proj4_cnt_cont[11] , \proj4_cnt_cont[10] , \proj4_cnt_cont[9] , \proj4_cnt_cont[8] , \proj4_cnt_cont[7] , \proj4_cnt_cont[6] , \proj4_cnt_cont[5] , \proj4_cnt_cont[4] , \proj4_cnt_cont[3] , \proj4_cnt_cont[2] , \proj4_cnt_cont[1] , \proj4_cnt_cont[0]  }),
+    .rst(proj4_reset),
+    .samplee(\proj4_io_in[25] ),
+    .seg_drvs({ \proj4_io_out[24] , \proj4_io_out[23] , \proj4_io_out[22] , \proj4_io_out[21] , \proj4_io_out[20] , \proj4_io_out[19] , \proj4_io_out[18] , \proj4_io_out[17]  }),
+    .strobe(proj4_wb_update),
+    .tx(\proj4_io_out[6] ),
+    .value(wbs_dat_i)
+  );
+  watch_hhmm proj_5 (
+    .VGND(vssd1),
+    .VPWR(vccd1),
+    .cfg_i(wbs_dat_i[11:0]),
+    .dvalid_i(proj5_wb_update),
+    .rstn_i(proj5_reset),
+    .sclk_i(\proj5_io_in[37] ),
+    .segment_hxxx({ \proj5_io_out[14] , \proj5_io_out[13] , \proj5_io_out[12] , \proj5_io_out[11] , \proj5_io_out[10] , \proj5_io_out[9] , \proj5_io_out[8]  }),
+    .segment_xhxx({ \proj5_io_out[21] , \proj5_io_out[20] , \proj5_io_out[19] , \proj5_io_out[18] , \proj5_io_out[17] , \proj5_io_out[16] , \proj5_io_out[15]  }),
+    .segment_xxmx({ \proj5_io_out[28] , \proj5_io_out[27] , \proj5_io_out[26] , \proj5_io_out[25] , \proj5_io_out[24] , \proj5_io_out[23] , \proj5_io_out[22]  }),
+    .segment_xxxm({ \proj5_io_out[35] , \proj5_io_out[34] , \proj5_io_out[33] , \proj5_io_out[32] , \proj5_io_out[31] , \proj5_io_out[30] , \proj5_io_out[29]  }),
+    .smode_i(\proj5_io_in[36] ),
+    .sysclk_i(proj5_clk)
+  );
+  challenge proj_6 (
+    .VGND(vssd1),
+    .VPWR(vccd1),
+    .clk_10(proj6_clk),
+    .led_green(\proj6_io_out[9] ),
+    .led_red(\proj6_io_out[10] ),
+    .uart(\proj6_io_in[8] )
+  );
+  MM2hdmi proj_7 (
+    .VGND(vssd1),
+    .VPWR(vccd1),
+    .clock(\proj7_io_in[35] ),
+    .io_data({ \proj7_io_in[23] , \proj7_io_in[22] , \proj7_io_in[21] , \proj7_io_in[20] , \proj7_io_in[19] , \proj7_io_in[18] , \proj7_io_in[17] , \proj7_io_in[16] , \proj7_io_in[15] , \proj7_io_in[14] , \proj7_io_in[13] , \proj7_io_in[12] , \proj7_io_in[11] , \proj7_io_in[10] , \proj7_io_in[9] , \proj7_io_in[8]  }),
+    .io_hSync(\proj7_io_out[33] ),
+    .io_newData(\proj7_io_in[24] ),
+    .io_red({ \proj7_io_out[32] , \proj7_io_out[31] , \proj7_io_out[30] , \proj7_io_out[29] , \proj7_io_out[28] , \proj7_io_out[27] , \proj7_io_out[26] , \proj7_io_out[25]  }),
+    .io_vSync(\proj7_io_out[34] ),
+    .reset(proj7_reset)
   );
 endmodule
