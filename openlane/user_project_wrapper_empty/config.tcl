@@ -16,6 +16,8 @@ set ::env(FP_IO_HEXTEND) [expr 2*$::unit]
 set ::env(FP_IO_VLENGTH) $::unit
 set ::env(FP_IO_HLENGTH) $::unit
 
+set ::env(GLB_RT_MAXLAYER) 4
+
 set ::env(FP_IO_VTHICKNESS_MULT) 4
 set ::env(FP_IO_HTHICKNESS_MULT) 4
 
