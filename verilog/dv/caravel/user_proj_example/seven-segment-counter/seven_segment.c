@@ -76,7 +76,7 @@ void main()
     reg_la0_data &= ~(1 << 24);
 
 
-    // wait for a bit
+    // wait for a bit: 5 nops takes 70us
     int i = 0; 
     for(i = 0; i < 5; i ++ )
         asm("nop");
