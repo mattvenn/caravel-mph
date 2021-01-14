@@ -21,27 +21,8 @@ set ::env(GLB_RT_MAXLAYER) 4
 set ::env(FP_IO_VTHICKNESS_MULT) 4
 set ::env(FP_IO_HTHICKNESS_MULT) 4
 
-set ::env(GLB_RT_OBS)  "met5 430   2600  148.800 159.520 ,
-                        met4 430   2600  148.800 159.520 ,
-                        met5 360   1700  271.030 281.750 ,
-                        met4 360   1700  271.030 281.750 ,
-                        met5 2300  1700  227.025 237.745 ,
-                        met4 2300  1700  227.025 237.745 ,
-                        met5 1000  1700  333.390 344.110 ,
-                        met4 1000  1700  333.390 344.110 ,
-                        met5 1500  2500  389.335 400.055 ,
-                        met4 1500  2500  389.335 400.055 ,
-                        met5 1920  1750  156.375 167.095 ,
-                        met4 1920  1750  156.375 167.095 ,
-                        met5 2400  2600  156.720 173.820 ,
-                        met4 2400  2600  156.720 173.820 ,
-                        met5 1000  2600  100.000 200.000 ,
-                        met4 1000  2600  100.000 200.000 ,
-                        met5 670   600   1500.000 400.000,
-                        met4 670   600   1500.000 400.000,
-                        li1  0     0     2920 3520"
-
-
+# read auto generated obstructions
+source ./user_project_wrapper/obstruction.tcl
 
 #set ::env(GLB_RT_ADJUSTMENT) 0.2
 
@@ -63,8 +44,8 @@ set ::env(VERILOG_FILES) "\
 	$script_dir/../../verilog/rtl/user_project_wrapper.v"
 
 set ::env(VERILOG_FILES_BLACKBOX) "\
-	$script_dir/../../verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/multi_project_harness/blackbox.v"
+	$script_dir/../../verilog/rtl/wrapper.v \
+	$script_dir/../../verilog/rtl/defines.v"
 
 set ::env(EXTRA_LEFS) [glob $::env(DESIGN_DIR)/macros/lef/*.lef]
 set ::env(EXTRA_GDS_FILES) [glob $::env(DESIGN_DIR)/macros/gds/*.gds]
