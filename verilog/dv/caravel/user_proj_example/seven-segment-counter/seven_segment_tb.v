@@ -59,7 +59,7 @@ module seven_segment_tb;
         wait(segments == 7'b1100111);
 
         $display("Monitor: Test 1 Mega-Project IO (RTL) Passed");
-        $finish;
+        //$finish;
     end
 
     initial begin

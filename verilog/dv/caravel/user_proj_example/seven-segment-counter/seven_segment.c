@@ -75,5 +75,30 @@ void main()
     reg_la0_data |= 1 << 24;
     reg_la0_data &= ~(1 << 24);
 
+
+    // wait for a bit
+    int i = 0; 
+    for(i = 0; i < 5; i ++ )
+        asm("nop");
+
+    // activate another project
+    reg_la1_data = 1 << 7;
+
+    // compare is 23:0
+    // compare update is 24
+    // reset is 25
+
+    // reset
+    reg_la0_data |= 1 << 25;
+    reg_la0_data &= ~(1 << 25);
+
+    // load different compare
+    reg_la0_data |= 20;
+
+    // update compare
+    reg_la0_data |= 1 << 24;
+    reg_la0_data &= ~(1 << 24);
+
+
 }
 

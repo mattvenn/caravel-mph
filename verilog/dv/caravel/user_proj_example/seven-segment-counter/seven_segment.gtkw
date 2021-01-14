@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.108 (w)1999-2020 BSI
-[*] Thu Jan 14 12:38:14 2021
+[*] Thu Jan 14 12:58:46 2021
 [*]
 [dumpfile] "/home/matt/work/asic-workshop/caravel-mph/verilog/dv/caravel/user_proj_example/seven-segment-counter/seven_segment.vcd"
-[dumpfile_mtime] "Thu Jan 14 12:37:33 2021"
-[dumpfile_size] 115513187
+[dumpfile_mtime] "Thu Jan 14 12:56:17 2021"
+[dumpfile_size] 191659799
 [savefile] "/home/matt/work/asic-workshop/caravel-mph/verilog/dv/caravel/user_proj_example/seven-segment-counter/seven_segment.gtkw"
 [timestart] 0
-[size] 2575 1137
-[pos] -1 -1
-*-27.000000 374900000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 2488 1137
+[pos] -26 12
+*-28.000000 333437500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] seven_segment_tb.
 [treeopen] seven_segment_tb.uut.
 [treeopen] seven_segment_tb.uut.gpio_control_bidir[0].
@@ -23,7 +23,13 @@
 [treeopen] seven_segment_tb.uut.gpio_control_in[8].
 [treeopen] seven_segment_tb.uut.gpio_control_in[9].
 [treeopen] seven_segment_tb.uut.mprj.
-[treeopen] seven_segment_tb.uut.mprj.project0.
+[treeopen] seven_segment_tb.uut.mprj.genblk1[0].
+[treeopen] seven_segment_tb.uut.mprj.genblk1[0].project0.
+[treeopen] seven_segment_tb.uut.mprj.genblk1[0].project0.seven_segment_seconds.
+[treeopen] seven_segment_tb.uut.mprj.genblk1[1].
+[treeopen] seven_segment_tb.uut.mprj.genblk1[1].project0.
+[treeopen] seven_segment_tb.uut.mprj.genblk1[7].
+[treeopen] seven_segment_tb.uut.mprj.genblk1[7].project0.
 [treeopen] seven_segment_tb.uut.soc.
 [treeopen] seven_segment_tb.uut.soc.housekeeping.
 [treeopen] seven_segment_tb.uut.soc.soc.
@@ -50,13 +56,11 @@ seven_segment_tb.uut.mprj.la_data_out[127:0]
 seven_segment_tb.uut.mprj.la_oen[127:0]
 @200
 -
-@28
-seven_segment_tb.uut.mprj.project0_active
 @1000200
 -la
 @200
 -
-@800200
+@c00201
 -io
 @22
 seven_segment_tb.uut.mprj.io_in[37:0]
@@ -104,9 +108,9 @@ seven_segment_tb.uut.mprj.io_out[37:0]
 (37)seven_segment_tb.uut.mprj.io_out[37:0]
 @1401200
 -group_end
-@800023
+@800022
 seven_segment_tb.mprj_io[37:0]
-@29
+@28
 (0)seven_segment_tb.mprj_io[37:0]
 (1)seven_segment_tb.mprj_io[37:0]
 (2)seven_segment_tb.mprj_io[37:0]
@@ -145,38 +149,42 @@ seven_segment_tb.mprj_io[37:0]
 (35)seven_segment_tb.mprj_io[37:0]
 (36)seven_segment_tb.mprj_io[37:0]
 (37)seven_segment_tb.mprj_io[37:0]
-@1001201
+@1001200
 -group_end
-@1000200
+@1401201
 -io
 @200
 -
-@800200
--seven seg
+@c00200
+-proj 0
 @28
-seven_segment_tb.uut.mprj.project0.seven_segment_seconds.clk
+seven_segment_tb.uut.mprj.genblk1[0].project0.active
+seven_segment_tb.uut.mprj.genblk1[0].project0.seven_segment_seconds.clk
 @22
-seven_segment_tb.uut.mprj.project0.seven_segment_seconds.compare[23:0]
-seven_segment_tb.uut.mprj.project0.seven_segment_seconds.compare_in[23:0]
+seven_segment_tb.uut.mprj.genblk1[0].project0.seven_segment_seconds.compare_in[23:0]
 @28
-seven_segment_tb.uut.mprj.project0.seven_segment_seconds.update_compare
-seven_segment_tb.uut.mprj.project0.seven_segment_seconds.reset
-@22
-seven_segment_tb.uut.mprj.project0.seven_segment_seconds.second_counter[23:0]
-seven_segment_tb.uut.mprj.project0.seven_segment_seconds.digit[3:0]
-@c00022
-seven_segment_tb.uut.mprj.project0.seven_segment_seconds.led_out[6:0]
-@28
-(0)seven_segment_tb.uut.mprj.project0.seven_segment_seconds.led_out[6:0]
-(1)seven_segment_tb.uut.mprj.project0.seven_segment_seconds.led_out[6:0]
-(2)seven_segment_tb.uut.mprj.project0.seven_segment_seconds.led_out[6:0]
-(3)seven_segment_tb.uut.mprj.project0.seven_segment_seconds.led_out[6:0]
-(4)seven_segment_tb.uut.mprj.project0.seven_segment_seconds.led_out[6:0]
-(5)seven_segment_tb.uut.mprj.project0.seven_segment_seconds.led_out[6:0]
-(6)seven_segment_tb.uut.mprj.project0.seven_segment_seconds.led_out[6:0]
+seven_segment_tb.uut.mprj.genblk1[0].project0.seven_segment_seconds.update_compare
 @1401200
--group_end
+-proj 0
+@200
+-
+@800200
+-proj 1
+@28
+seven_segment_tb.uut.mprj.genblk1[1].project0.active
+@22
+seven_segment_tb.uut.mprj.genblk1[1].project0.seven_segment_seconds.compare_in[23:0]
+@28
+seven_segment_tb.uut.mprj.genblk1[1].project0.seven_segment_seconds.update_compare
 @1000200
--seven seg
+-proj 1
+@28
+seven_segment_tb.uut.mprj.genblk1[7].project0.active
+@22
+seven_segment_tb.uut.mprj.genblk1[7].project0.seven_segment_seconds.compare_in[23:0]
+@28
+seven_segment_tb.uut.mprj.genblk1[7].project0.seven_segment_seconds.update_compare
+@200
+-
 [pattern_trace] 1
 [pattern_trace] 0
