@@ -5,7 +5,7 @@ IP_PATH = ../../../../ip
 BEHAVIOURAL_MODELS = ../../ 
 
 TOOLCHAIN_PREFIX?=/opt/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-
-PDK_PATH?=~/work/asic-workshop/pdks/sky130A
+PDK_PATH?=~/work/asic/pdks/sky130A
 
 .SUFFIXES:
 

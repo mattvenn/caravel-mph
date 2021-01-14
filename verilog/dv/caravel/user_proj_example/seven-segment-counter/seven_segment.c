@@ -6,8 +6,6 @@
 		- Observes counter value through the LED digits
 */
 
-#define reg_mprj_7seg (*(volatile uint32_t*)0x30000200)
-
 void main()
 {
 	/* 
@@ -53,15 +51,29 @@ void main()
     reg_mprj_xfer = 1;
     while (reg_mprj_xfer == 1);
 
-    // change to project 0
-    reg_mprj_slave = 0;
-
     // use logic analyser to reset the counter
-    reg_la0_ena  = 0x00000000; // bits 31:0 outputs
-    reg_la0_data = 0x00000001; // reset high is on bit 0
-    reg_la0_data = 0x00000000; // low
+    //seven_segment_seconds seven_segment_seconds (.clk(wb_clk_i), .reset(la_data_in[25]), .led_out(buf_io_out[14:8]), .compare_in(la_data_in[23:0]), .update_compare(la_data_in[24]));
 
-    // update 7seg compare reg to 10
-    reg_mprj_7seg = 10;
+    // activate the project
+    reg_la1_ena  = 0;
+    reg_la1_data = 1 << 0;
+
+    // compare is 23:0
+    // compare update is 24
+    // reset is 25
+    reg_la0_ena  = 0x00000000; // bits 31:0 outputs
+    reg_la0_data = 0x00000000;
+
+    // reset
+    reg_la0_data |= 1 << 25;
+    reg_la0_data &= ~(1 << 25);
+
+    // load new compare
+    reg_la0_data |= 10;
+
+    // update compare
+    reg_la0_data |= 1 << 24;
+    reg_la0_data &= ~(1 << 24);
+
 }
 
