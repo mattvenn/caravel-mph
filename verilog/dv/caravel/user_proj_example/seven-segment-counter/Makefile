@@ -5,7 +5,8 @@ IP_PATH = ../../../../ip
 BEHAVIOURAL_MODELS = ../../ 
 
 TOOLCHAIN_PREFIX?=/opt/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-
-PDK_PATH?=~/work/asic/pdks/sky130A
+PDK_PATH?=~/work/asic-workshop/pdks/sky130A
+
 
 .SUFFIXES:
 
@@ -14,6 +15,14 @@ PATTERN = seven_segment
 all:  ${PATTERN:=.vcd}
 
 hex:  ${PATTERN:=.hex}
+
+coco_test: ${PATTERN}.hex
+	rm -rf sim_build/
+	mkdir sim_build/
+	iverilog -o sim_build/sim.vvp -s seven_segment_tb coco_test.v -DSIM -DFUNCTIONAL \
+    -I $(BEHAVIOURAL_MODELS) -I $(PDK_PATH) -I $(IP_PATH) -I $(RTL_PATH) 
+	
+	MODULE=test vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
 
 %.vvp: %_tb.v %.hex
 	iverilog -DSIM -DFUNCTIONAL -I $(BEHAVIOURAL_MODELS) \

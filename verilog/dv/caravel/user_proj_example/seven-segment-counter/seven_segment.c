@@ -51,12 +51,9 @@ void main()
     reg_mprj_xfer = 1;
     while (reg_mprj_xfer == 1);
 
-    // use logic analyser to reset the counter
-    //seven_segment_seconds seven_segment_seconds (.clk(wb_clk_i), .reset(la_data_in[25]), .led_out(buf_io_out[14:8]), .compare_in(la_data_in[23:0]), .update_compare(la_data_in[24]));
-
-    // activate the project
     reg_la1_ena  = 0;
-    reg_la1_data = 1 << 0;
+
+    // all inputs stay connected so this config will happen to all 16 instances
 
     // compare is 23:0
     // compare update is 24
@@ -69,36 +66,16 @@ void main()
     reg_la0_data &= ~(1 << 25);
 
     // load new compare
-    reg_la0_data |= 10;
+    reg_la0_data |= 2;
 
     // update compare
     reg_la0_data |= 1 << 24;
     reg_la0_data &= ~(1 << 24);
 
-
-    // wait for a bit: 5 nops takes 70us
-    int i = 0; 
-    for(i = 0; i < 5; i ++ )
-        asm("nop");
-
-    // activate another project
-    reg_la1_data = 1 << 7;
-
-    // compare is 23:0
-    // compare update is 24
-    // reset is 25
-
-    // reset
-    reg_la0_data |= 1 << 25;
-    reg_la0_data &= ~(1 << 25);
-
-    // load different compare
-    reg_la0_data |= 20;
-
-    // update compare
-    reg_la0_data |= 1 << 24;
-    reg_la0_data &= ~(1 << 24);
-
-
+    // then activate each in turn
+    for ( int i = 0; i < 16; i ++ ) {
+        // activate the project
+        reg_la1_data = 1 << i;
+    }
 }
 
