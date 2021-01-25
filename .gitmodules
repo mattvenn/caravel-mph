@@ -1,3 +1,6 @@
 [submodule "verilog/rtl/multi_project_harness"]
 	path = verilog/rtl/multi_project_harness
 	url = https://github.com/mattvenn/multi-project-harness
+[submodule "verilog/rtl/seven_segment_seconds"]
+	path = verilog/rtl/seven_segment_seconds
+	url = https://github.com/mattvenn/seven-segment-seconds

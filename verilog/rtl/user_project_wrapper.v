@@ -1,5 +1,5 @@
 `default_nettype none
-`include "multi_project_harness/includes.v"
+//`include "multi_project_harness/includes.v"
 `ifdef COCOTB_SIM
     `define MPRJ_IO_PADS 38
 `endif
@@ -68,6 +68,7 @@ module user_project_wrapper #(
     /* User project is instantiated  here   */
     /*--------------------------------------*/
     
+    /*
     genvar i;
     generate
     for( i = 0; i < 8 ; i = i + 1) begin
@@ -99,7 +100,440 @@ module user_project_wrapper #(
         );
     end
     endgenerate
+    */
+    
 
+            wrapper proj_0(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
 
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+0])
+                );
+        
+            wrapper proj_1(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+1])
+                );
+        
+            wrapper proj_2(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+2])
+                );
+        
+            wrapper proj_3(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+3])
+                );
+        
+            wrapper proj_4(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+4])
+                );
+        
+            wrapper proj_5(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+5])
+                );
+        
+            wrapper proj_6(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+6])
+                );
+        
+            wrapper proj_7(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+7])
+                );
+        
+            wrapper proj_8(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+8])
+                );
+        
+            wrapper proj_9(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+9])
+                );
+        
+            wrapper proj_10(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+10])
+                );
+        
+            wrapper proj_11(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+11])
+                );
+        
+            wrapper proj_12(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+12])
+                );
+        
+            wrapper proj_13(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+13])
+                );
+        
+            wrapper proj_14(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+14])
+                );
+        
+            wrapper proj_15(
+                // interface as user_proj_example.v
+                .wb_clk_i   (wb_clk_i),
+                .wb_rst_i   (wb_rst_i),
+                .wbs_stb_i  (wbs_stb_i),
+                .wbs_cyc_i  (wbs_cyc_i),
+                .wbs_we_i   (wbs_we_i),
+                .wbs_sel_i  (wbs_sel_i),
+                .wbs_dat_i  (wbs_dat_i),
+                .wbs_adr_i  (wbs_adr_i),
+                .wbs_ack_o  (wbs_ack_o),
+                .wbs_dat_o  (wbs_dat_o),
+
+                // only provide first 32 bits to reduce wiring congestion
+                .la_data_in (la_data_in [31:0]),
+                .la_data_out(la_data_out[31:0]),
+                .la_oen     (la_oen[31:0]),
+
+                // IOs
+                .io_in      (io_in),
+                .io_out     (io_out),
+                .io_oeb     (io_oeb),
+                
+                // active input, only connect tristated outputs if this is high
+                .active     (la_data_in[32+15])
+                );
+        
 endmodule	// user_project_wrapper
 `default_nettype wire

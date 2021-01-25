@@ -63,6 +63,7 @@
 /* Include user project here	*/
 /*------------------------------*/
 `include "wrapper.v"
+`include "seven_segment_seconds/seven_segment_seconds.v"
 
 // `ifdef USE_OPENRAM
 //     `include "sram_1rw1r_32_256_8_sky130.v"
