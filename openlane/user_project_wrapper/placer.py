@@ -4,13 +4,13 @@ num_macros = 8
 width = 2920
 height =  3520
 
-macro_w = 200
-macro_h = 200
+macro_w = 300
+macro_h = 300
 
 h_space = width / 4
 v_space = height / 4
 
-obs_border = 20
+obs_border = 30
 
 macro_inst    = open("macro_placement.tcl", 'w') 
 macro_obs     = open("obstruction.tcl" , 'w') 

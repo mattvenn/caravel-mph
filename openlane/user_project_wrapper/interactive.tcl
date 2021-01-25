@@ -70,3 +70,5 @@ run_magic_drc
 run_lvs; # requires run_magic_spice_export
 
 run_antenna_check
+
+generate_final_summary_report
