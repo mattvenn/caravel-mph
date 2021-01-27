@@ -82,16 +82,16 @@ module user_project_wrapper #(
 
     wrapper proj_0(
         // interface as user_proj_example.v
-        `ifdef USE_POWER_PINS
-            inout vdda1,	// User area 1 3.3V supply
-            inout vdda2,	// User area 2 3.3V supply
-            inout vssa1,	// User area 1 analog ground
-            inout vssa2,	// User area 2 analog ground
-            inout vccd1,	// User area 1 1.8V supply
-            inout vccd2,	// User area 2 1.8v supply
-            inout vssd1,	// User area 1 digital ground
-            inout vssd2,	// User area 2 digital ground
-        `endif
+    `ifdef USE_POWER_PINS
+        .vdda1      (vdda1),	// User area 1 3.3V supply
+        .vdda2      (vdda2),	// User area 2 3.3V supply
+        .vssa1      (vssa1),	// User area 1 analog ground
+        .vssa2      (vssa2),	// User area 2 analog ground
+        .vccd1      (vccd1),	// User area 1 1.8V supply
+        .vccd2      (vccd2),	// User area 2 1.8v supply
+        .vssd1      (vssd1),	// User area 1 digital ground
+        .vssd2      (vssd2),	// User area 2 digital ground
+    `endif
         .wb_clk_i   (wb_clk_i),
         .wb_rst_i   (wb_rst_i),
         .wbs_stb_i  (wbs_stb_i),
