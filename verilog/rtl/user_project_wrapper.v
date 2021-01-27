@@ -14,6 +14,13 @@
 // SPDX-License-Identifier: Apache-2.0
 
 `default_nettype none
+
+`include "wrapped_rgb_mixer/rgb_mixer/src/rgb_mixer.v"
+`include "wrapped_rgb_mixer/rgb_mixer/src/debounce.v"
+`include "wrapped_rgb_mixer/rgb_mixer/src/pwm.v"
+`include "wrapped_rgb_mixer/rgb_mixer/src/encoder.v"
+`include "wrapped_rgb_mixer/wrapper.v"
+
 /*
  *-------------------------------------------------------------
  *
