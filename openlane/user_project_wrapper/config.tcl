@@ -19,7 +19,6 @@ set script_dir [file dirname [file normalize [info script]]]
 set ::env(DESIGN_NAME) user_project_wrapper
 #section end
 
-
 # User Configurations
 
 ## Source Verilog Files
@@ -40,13 +39,13 @@ set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$script_dir/../../verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/user_proj_example.v"
+	$script_dir/../../verilog/rtl/wrapped_rgb_mixer/wrapper.v"
 
 set ::env(EXTRA_LEFS) "\
-	$script_dir/../../lef/user_proj_example.lef"
+	$script_dir/../../lef/wrapper.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-	$script_dir/../../gds/user_proj_example.gds"
+	$script_dir/../../gds/wrapper.gds"
 
 
 # The following is because there are no std cells in the example wrapper project.

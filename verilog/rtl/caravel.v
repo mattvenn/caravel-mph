@@ -83,11 +83,7 @@
 /*------------------------------*/
 /* Include user project here	*/
 /*------------------------------*/
-`include "wrapped_rgb_mixer/rgb_mixer/src/rgb_mixer.v"
-`include "wrapped_rgb_mixer/rgb_mixer/src/debounce.v"
-`include "wrapped_rgb_mixer/rgb_mixer/src/pwm.v"
-`include "wrapped_rgb_mixer/rgb_mixer/src/encoder.v"
-`include "wrapped_rgb_mixer/wrapper.v"
+`include "user_proj_example.v"
 
 // `ifdef USE_OPENRAM
 //     `include "sram_1rw1r_32_256_8_sky130.v"
