@@ -18,7 +18,9 @@
 
 # OpenLane Configs
 
-All the OpenLane configs for each project are here: https://github.com/mattvenn/multi-project-harness/tree/main/openlane/macroconfig
+All the OpenLane configs for each project are here: https://github.com/mattvenn/multi-project-harness/tree/separate-macro/openlane
+
+The multi project harness turned out to be more of a MUX, and was hardened separately. Make sure you are on the 'separate-macro' branch of the repo.
 
 # Submodules
 
