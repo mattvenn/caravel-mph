@@ -20,6 +20,7 @@
 `define USE_POWER_PINS
 
 `include "defines.v"
+`include "multi_project_harness/includes.v"
 `include "pads.v"
 
 /* NOTE: Need to pass the PDK root directory to iverilog with option -I */
