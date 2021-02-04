@@ -72,6 +72,6 @@ void main()
 
     // use logic analyser to reset the design
     reg_la0_ena  = 0x00000000; // bits 31:0 outputs
-    reg_la0_data = 0x00000001; // reset high is on bit 0
+    reg_la0_data = 0x00000001; // resetn of module input gets inverted inside multiproject harness.
     reg_la0_data = 0x00000000; // low
 }

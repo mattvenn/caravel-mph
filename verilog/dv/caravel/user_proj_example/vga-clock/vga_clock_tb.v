@@ -31,7 +31,7 @@ module vga_clock_tb;
     // simulation.  Normally this would be a slow clock and the digital PLL
     // would be the fast clock.
 
-    always #12.5 clock <= (clock === 1'b0);
+    always #1 clock <= (clock === 1'b0);
 
     initial begin
         clock = 0;
@@ -42,9 +42,9 @@ module vga_clock_tb;
         $dumpvars(0, vga_clock_tb);
 
         // Repeat cycles of 1000 clock edges as needed to complete testbench
-        repeat (15) begin
+        repeat (50) begin
             repeat (1000) @(posedge clock);
-            // $display("+1000 cycles");
+            $display("+1000 cycles");
         end
         $display("%c[1;31m",27);
         $display ("Monitor: Timeout, Test Mega-Project IO Ports (RTL) Failed");
@@ -54,6 +54,7 @@ module vga_clock_tb;
 
     initial begin
         // wait for reset, we have 2 before the project is ready
+        /*
         wait(uut.mprj.mprj.proj_2.reset == 1);
         wait(uut.mprj.mprj.proj_2.reset == 0);
         wait(uut.mprj.mprj.proj_2.reset == 1);
@@ -69,6 +70,7 @@ module vga_clock_tb;
         $display ("adjusted min ok");
         wait(uut.mprj.mprj.proj_2.sec_u == 1);
         $display ("adjusted sec ok");
+        */
         
     end
 
