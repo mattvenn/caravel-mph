@@ -59,10 +59,14 @@ void main()
     reg_la0_data = 0x00000001; // reset high is on bit 0
     reg_la0_data = 0x00000000; // low
 
-    // update led 7
-    uint8_t led_num = 7;
+    // update all leds
     uint8_t r = 255;
     uint8_t g = 10;
     uint8_t b = 100;
-    reg_mprj_ws2812 = (led_num << 24) + (r << 16) + (g << 8) + b;
+    for(uint8_t led_num = 0; led_num < 8; led_num ++) {
+        reg_mprj_ws2812 = (led_num << 24) + (r << 16) + (g << 8) + b;
+        r -= 10;
+        g += 10;
+        b += 10;
+    }
 }

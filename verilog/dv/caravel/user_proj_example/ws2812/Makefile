@@ -4,7 +4,7 @@ IP_PATH = ../../../../ip
 #MP_PATH = ../../../../rtl/multi_project_harness
 BEHAVIOURAL_MODELS = ../../
 
-TOOLCHAIN_PREFIX?=riscv32-unknown-elf-
+TOOLCHAIN_PREFIX?=/opt/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-
 PDK_PATH?=$(PDK_ROOT)/sky130A/
 
 .SUFFIXES:
